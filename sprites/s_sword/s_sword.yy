@@ -2,15 +2,15 @@
     "id": "32ef2871-d3eb-4bcf-8a14-e21a29b4a699",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite_0",
+    "name": "s_sword",
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 63,
-    "bbox_left": 0,
-    "bbox_right": 63,
-    "bbox_top": 0,
-    "bboxmode": 0,
+    "bbox_bottom": 35,
+    "bbox_left": 19,
+    "bbox_right": 61,
+    "bbox_top": 28,
+    "bboxmode": 2,
     "colkind": 1,
     "coltolerance": 0,
     "frames": [
@@ -53,8 +53,8 @@
             "visible": true
         }
     ],
-    "origin": 7,
-    "playbackSpeed": 15,
+    "origin": 4,
+    "playbackSpeed": 4,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,
@@ -64,5 +64,5 @@
     "type": 0,
     "width": 64,
     "xorig": 32,
-    "yorig": 63
+    "yorig": 32
 }

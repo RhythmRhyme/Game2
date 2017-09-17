@@ -42,7 +42,7 @@
             "Key": "32ef2871-d3eb-4bcf-8a14-e21a29b4a699",
             "Value": {
                 "id": "d7df4b98-d7fc-4b0a-861f-d10b50884124",
-                "resourcePath": "sprites\\sprite_0\\sprite_0.yy",
+                "resourcePath": "sprites\\s_sword\\s_sword.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "7aef6286-9591-4914-98ee-30b0fc3e074b",
+            "Value": {
+                "id": "850713f7-0a93-4d3d-b188-da395ff0f9a5",
+                "resourcePath": "sprites\\s_enemy_scarecrow\\s_enemy_scarecrow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9f90c124-e512-45c6-b6e1-acb0abaa3d4b",
             "Value": {
                 "id": "61e168d1-a446-4943-9f37-58c60b051dec",
@@ -154,7 +162,7 @@
             "Key": "b4dbe480-057c-43eb-b881-aab34eb1e4fa",
             "Value": {
                 "id": "92e87b73-395e-451d-a704-e686024fe3cd",
-                "resourcePath": "objects\\object_0\\object_0.yy",
+                "resourcePath": "objects\\o_sword\\o_sword.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -220,6 +228,14 @@
                 "id": "44c5e520-e8d9-4feb-9195-5185fc6f1034",
                 "resourcePath": "views\\edb8b4ce-f309-464b-896a-01a47e82bdb3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f3c1be06-be34-40b3-87b4-7baab7af29a0",
+            "Value": {
+                "id": "029d27f3-dd98-4b2d-bf20-483ecc168ff6",
+                "resourcePath": "objects\\o_enemy_scarecrow\\o_enemy_scarecrow.yy",
+                "resourceType": "GMObject"
             }
         },
         {
