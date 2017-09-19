@@ -1,5 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-HPloose = 0;
-showed = 0;
-depth = -99
+instance_destroy();

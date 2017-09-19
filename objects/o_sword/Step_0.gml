@@ -11,15 +11,28 @@ var directionMouse = point_direction(x,y,mouse_x,mouse_y);
 var	playerX = o_player.x;
 var	playerY = o_player.y - o_player.sprite_height/2;
 
+//出鞘落点位置
+var	drewX = playerX  - 150 ;
+var	drewY = playerY - 259.5;
+
 if(status == 8){
 	x = playerX;
 	y = playerY;
 }
 
+var collisionEnemy = place_meeting(x,y,o_enemy_scarecrow);
+//攻击间隔
+if(punctureCooldownCurrent>0){
+	if(collisionEnemy)
+		punctureCooldownCurrent -= 1;
+	else{
+		punctureCooldownCurrent = 0;
+	}
+}
+
 
 //状态判断
 if(status == 1 || status == 2){
-	var collisionEnemy = place_meeting(x,y,o_enemy_scarecrow);
 	if(!collisionEnemy){
 		if(speed > 0){
 			status = 1;
@@ -32,17 +45,11 @@ if(status == 1 || status == 2){
 
 if(mouseLeft){
 	if(status == 8){	//已入鞘
+		var directionDrew = point_direction(x,y,drewX,drewY);
+		direction = directionDrew;
 		status = 7 ;	//出鞘
-		var	playerX = o_player.x - 2  - 100 ;
-		var	playerY = o_player.y - o_player.sprite_height/2 + 2 - 173;
-		//出鞘落点位置
-		var directionPlayer = point_direction(x,y,playerX,playerY);
-		direction = directionPlayer;
-		speed = speedMax;
 		
 	}else if(status == 9){	//剑归
-		direction = directionMouse;
-		image_angle = direction;
 		status = 1;
 	}
 	
@@ -59,24 +66,36 @@ if(mouseLeft){
 		}
 	}
 	
-}else if(mouseRight && status != 9){
+}else if(mouseRight && status != 8 && drewCooldown == 0){
 	status = 9;	//剑归
-	
+	lastBackStatus = 0;	//未到达出鞘落点
+	drewCooldown = 60;
+	alarm[0] = room_speed;
 }
 
 if(status == 8){	//入鞘
 	image_angle = 300;
 	direction = 300;
 	
-}else if(status == 0 || status == 1){	//剑止 or 剑去
+}else if(status == 0 || status == 1 || status == 2){	//剑止 or 剑去 or 触敌
 	
 	if(!mouseLeft){
 		//slowdown
-		if(speed - slowdown > 0 ){
+		if(speed - slowdown > speedMax / 2 ){
 			speed -= slowdown;
+		}else if(speed - slowdown > 0 ){
+			speed -= slowdown/2;
 		}else{
 			speed = 0;
 		}
+	}
+	
+	//静止时归剑
+	if(speed == 0 && drewCooldown == 0){
+		status = 9;	//剑归
+		lastBackStatus = 0;	//未到达出鞘落点
+		drewCooldown = 60;
+		alarm[0] = room_speed;
 	}
 
 	//鼠标当前未指向飞剑
@@ -125,54 +144,63 @@ if(status == 8){	//入鞘
 }else if(status == 9){	//剑归
 	
 	//距离玩家的位置
-	if(abs(playerX - x) < 4 && abs(playerY - y) < 4){
+	if(abs(playerX - x) < 4 && abs(playerY - y) < 4 && lastBackStatus ){
 		speed = 0;
 		x = playerX;
 		y = playerY;
 		status = 8;	//入鞘
 		drewTime = 0;
 		
-	}else if( abs(playerX - x) < 50 && abs(playerY - y) < 50){	//靠近玩家
+	}else if( abs(playerX - x) < 50 && abs(playerY - y) < 50 && lastBackStatus ){	//靠近玩家
 		move_towards_point(playerX,playerY,10);
 		
 	}else{
-
-		var directionPlayer = point_direction(x,y,playerX,playerY);
-		if(direction < directionPlayer ){
-			//细微转向
-			if(direction + rotationRate > directionPlayer){
-				direction = directionPlayer;
-			}else{
-				if(directionPlayer - direction <= 180+rotationRate){
-					direction += rotationRate;
-				}else{
-					//0度-360度轴的处理
-					//细微转向
-					if(direction+360 - directionPlayer < rotationRate){
-						direction = directionPlayer;
-					}else{
-						direction -= rotationRate;
-					}
-				}
+		var directionTo;
+		if(!lastBackStatus){
+			directionTo = point_direction(x,y,drewX,drewY);
+			if( abs(drewX - x) < 50 && abs(drewY - y) < 50){	//靠近出鞘点
+				lastBackStatus = 1;
 			}
-		}else if(direction > directionPlayer ){
-			//细微转向
-			if(direction - rotationRate < directionPlayer){
-				direction = directionPlayer;
-			}else{
-				if(direction - directionPlayer <= 180+rotationRate){
-					direction -= rotationRate;
-				}else{
-					//0度-360度轴的处理
-					//细微转向
-					if( 360 - direction + directionPlayer < rotationRate){
-						direction = directionPlayer;
-					}else{
-						direction += rotationRate;
-					}
-				}
-			}
+			
+		}else{
+			directionTo = point_direction(x,y,playerX,playerY);
 		}
+		
+		if(direction < directionTo ){
+				//细微转向
+				if(direction + rotationRate > directionTo){
+					direction = directionTo;
+				}else{
+					if(directionTo - direction <= 180+rotationRate){
+						direction += rotationRate;
+					}else{
+						//0度-360度轴的处理
+						//细微转向
+						if(direction+360 - directionTo < rotationRate){
+							direction = directionTo;
+						}else{
+							direction -= rotationRate;
+						}
+					}
+				}
+			}else if(direction > directionTo ){
+				//细微转向
+				if(direction - rotationRate < directionTo){
+					direction = directionTo;
+				}else{
+					if(direction - directionTo <= 180+rotationRate){
+						direction -= rotationRate;
+					}else{
+						//0度-360度轴的处理
+						//细微转向
+						if( 360 - direction + directionTo < rotationRate){
+							direction = directionTo;
+						}else{
+							direction += rotationRate;
+						}
+					}
+				}
+			}
 		image_angle = direction;
 		
 		//move
@@ -189,16 +217,17 @@ if(status == 8){	//入鞘
 	}
 }else if(status == 7){	//出鞘中
 	
-	var	drewX = o_player.x - 2  - 200 ;
-	var	drewY = o_player.y - o_player.sprite_height/2 + 2 - 346;
-	//出鞘落点位置
 	var directionDrew = point_direction(x,y,drewX,drewY);
 	
 	//出鞘时间
-	if( drewTime > 15/global.FPS ){
-		status = 1;
+	if( drewTime > 24 ){
+		if(collisionEnemy){
+			status = 2;
+		}else{
+			status = 1;
+		}
 	
-	} else if( drewTime > 3/global.FPS ){
+	} else if( drewTime > 8 ){
 		//3fps垂直拔剑后2倍转向速度调整剑尖转向出鞘落点
 		//细微转向
 		if(image_angle - rotationRate*2 < directionDrew){
@@ -221,7 +250,7 @@ if(status == 8){	//入鞘
 	speed = speedMax/2;
 	
 	
-	drewTime += 1/global.FPS;
+	drewTime += 1;
 	
 }
 
