@@ -11,4 +11,6 @@ draw_text(vpX,vpY+40,"o_sword.direction = "+string(o_sword.direction));
 draw_text(vpX,vpY+60,"o_sword.(x,y) = "+"("+string(o_sword.x)+", "+string(o_sword.y)+")");
 
 
-draw_text(vpX+200,vpY,"o_player.(x,y) = "+"("+string(o_player.x)+", "+string(o_player.y)+")");
+draw_text(vpX+300,vpY,"o_player.(x,y) = "+"("+string(o_player.x)+", "+string(o_player.y)+")");
+draw_text(vpX+300,vpY+20,"o_sword.speedv = "+string(o_player.speedv));
+draw_text(vpX+300,vpY+40,"o_sword.fallDown = "+string(o_player.fallDown));

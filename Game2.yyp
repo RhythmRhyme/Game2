@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-        
+        "default"
     ],
     "option_ecma": false,
     "parentProject": {
@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "bdde6b1d-4ce2-41f3-84b7-7710a1968327",
+            "Value": {
+                "id": "e07589b7-a882-4a8c-9df0-84f437d5e1b5",
+                "resourcePath": "sprites\\s_player_jump\\s_player_jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c9bc9517-449f-4cef-ba2b-c7b7ce3e997a",
             "Value": {
                 "id": "c6a4bd00-5fe3-43c3-a902-4a2868a9d457",
@@ -372,6 +380,14 @@
                 "id": "8104fb9b-84b6-4431-b8d2-4ec4b1d22d19",
                 "resourcePath": "views\\d001e103-a025-4c90-9c38-145538b525ca.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dd4dcf8f-d307-400d-9d5c-0709c4477cf1",
+            "Value": {
+                "id": "78ede825-1799-4bdc-bc29-6c513627d37f",
+                "resourcePath": "sprites\\s_scene_static\\s_scene_static.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -420,6 +436,14 @@
                 "id": "89afc073-3499-4604-ba42-286ea9a4b373",
                 "resourcePath": "objects\\o_HPloose_enemy\\o_HPloose_enemy.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fad819d0-88d4-4a7b-96f2-6300bb3301fd",
+            "Value": {
+                "id": "16841394-9449-4e5b-8855-6acb25e38955",
+                "resourcePath": "sprites\\s_player_falldown\\s_player_falldown.yy",
+                "resourceType": "GMSprite"
             }
         }
     ],

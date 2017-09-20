@@ -64,6 +64,7 @@ if(mouseLeft){
 		}else{
 			speed = speedMax;
 		}
+		status = 1;
 	}
 	
 }else if(mouseRight && status != 8 && drewCooldown == 0){
@@ -91,12 +92,12 @@ if(status == 8){	//入鞘
 	}
 	
 	//静止时归剑
-	if(speed == 0 && drewCooldown == 0){
-		status = 9;	//剑归
-		lastBackStatus = 0;	//未到达出鞘落点
-		drewCooldown = 60;
-		alarm[0] = room_speed;
-	}
+	//if(speed == 0 && drewCooldown){
+	//	status = 9;	//剑归
+	//	lastBackStatus = 0;	//未到达出鞘落点
+	//	drewCooldown = 60;
+	//	alarm[0] = room_speed;
+	//}
 
 	//鼠标当前未指向飞剑
 	if !((mouse_x <  x + sprite_width/2 && mouse_x > x - sprite_width/2) 
@@ -143,6 +144,8 @@ if(status == 8){	//入鞘
 	
 }else if(status == 9){	//剑归
 	
+	var circle_r = (180/rotationRate*speed*2)/3.141592653/2;
+	
 	//距离玩家的位置
 	if(abs(playerX - x) < 4 && abs(playerY - y) < 4 && lastBackStatus ){
 		speed = 0;
@@ -151,11 +154,11 @@ if(status == 8){	//入鞘
 		status = 8;	//入鞘
 		drewTime = 0;
 		
-	}else if( abs(playerX - x) < 10 && abs(playerY - y) < 10 && lastBackStatus ){	//靠近玩家
-		move_towards_point(playerX,playerY,6);
+	}else if( abs(playerX - x) < speedMax && abs(playerY - y) < speedMax && lastBackStatus ){	//靠近玩家
+		move_towards_point(playerX,playerY,speedMax/2.5);
 		
-	}else if( abs(playerX - x) < 60 && abs(playerY - y) < 60 && lastBackStatus ){	//靠近玩家
-		move_towards_point(playerX,playerY,10);
+	}else if( abs(playerX - x) < circle_r && abs(playerY - y) < circle_r && lastBackStatus ){	//靠近玩家
+		move_towards_point(playerX,playerY,speedMax);
 		
 	}else{
 		var directionTo;
@@ -252,8 +255,12 @@ if(status == 8){	//入鞘
 	direction = directionDrew;
 	speed = speedMax/2;
 	
-	
 	drewTime += 1;
 	
 }
 
+//御剑
+//if(o_player.standOnSword){
+//	o_player.speed = speed;
+//	o_player.direction = direction;
+//}
