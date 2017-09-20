@@ -12,7 +12,7 @@ var	playerX = o_player.x;
 var	playerY = o_player.y - o_player.sprite_height/2;
 
 //出鞘落点位置
-var	drewX = playerX  - 150 ;
+var	drewX = o_player.xscale == 1 ? playerX  - 150 : playerX  + 150 ;
 var	drewY = playerY - 259.5;
 
 if(status == 8){
@@ -151,7 +151,10 @@ if(status == 8){	//入鞘
 		status = 8;	//入鞘
 		drewTime = 0;
 		
-	}else if( abs(playerX - x) < 50 && abs(playerY - y) < 50 && lastBackStatus ){	//靠近玩家
+	}else if( abs(playerX - x) < 10 && abs(playerY - y) < 10 && lastBackStatus ){	//靠近玩家
+		move_towards_point(playerX,playerY,6);
+		
+	}else if( abs(playerX - x) < 60 && abs(playerY - y) < 60 && lastBackStatus ){	//靠近玩家
 		move_towards_point(playerX,playerY,10);
 		
 	}else{

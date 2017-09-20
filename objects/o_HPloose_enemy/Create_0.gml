@@ -2,4 +2,4 @@
 // You can write your code in this editor
 HPloose = 0;
 showed = 0;
-depth = -99
+depth = -room_height-1

@@ -1,5 +1,4 @@
 /// @description
-depth = -100;
 image_angle = 300;
 
 //0=static,1=flying,2=puncture,7=drew,8=inScabbard,9=back
@@ -16,4 +15,5 @@ speedMax = 20;
 slowdown = 0.25;
 rotationRate = 8;
 
-ATT = 8;
+ATT = 12;
+
