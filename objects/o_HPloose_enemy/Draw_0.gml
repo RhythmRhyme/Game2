@@ -5,10 +5,10 @@ if(HPloose >0){
 	
 	//视野外则使数字显示在视野内
 	
-	vpX = camera_get_view_x(view_camera[0]);
-	vpY = camera_get_view_y(view_camera[0]);
-	vpW = camera_get_view_width(view_camera[0]);
-	vpH = camera_get_view_height(view_camera[0]);
+	var vpX = camera_get_view_x(view_camera[0]);
+	var vpY = camera_get_view_y(view_camera[0]);
+	var vpW = camera_get_view_width(view_camera[0]);
+	var vpH = camera_get_view_height(view_camera[0]);
 		
 	if(x < vpX){
 		x = vpX;
@@ -30,7 +30,8 @@ if(HPloose >0){
 		
 	}
 	var alphaTemp = draw_get_alpha();
-	draw_set_alpha(0.75);
+	alpha -= alphaReduce;
+	draw_set_alpha(alpha);
 	draw_text(x,y,HPloose);
 	draw_set_alpha(alphaTemp);
 	if(!showed)	alarm[0] = room_speed/2;

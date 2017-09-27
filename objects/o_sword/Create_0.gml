@@ -9,13 +9,11 @@ lastBackStatus = 0;
 drewTime = 0;
 drewCooldown = 0;
 
-punctureCooldown = 20;
-punctureCooldownCurrent = 0;
-
-speedAcceleration = 0.5;
+speedAcceleration = 1;
 speedMax = 20;
-slowdown = 0.25;
-rotationRate = 8;
+slowdown = 0;	//slowdown = 0.25;
+rotationRate = 7.5;	//5-15
 
-ATT = 12;
+ATTmin = 8;
+ATTMax = 16;
 

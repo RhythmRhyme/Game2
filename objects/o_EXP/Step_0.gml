@@ -1,0 +1,1 @@
+enegybar.xscale = xscale;
