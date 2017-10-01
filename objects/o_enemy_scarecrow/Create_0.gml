@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 maxHP = 40;
 HP = maxHP;
 EXP = 3;

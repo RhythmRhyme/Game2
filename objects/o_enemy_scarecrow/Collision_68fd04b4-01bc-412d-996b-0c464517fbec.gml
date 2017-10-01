@@ -1,5 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
 
 if( HP > 0 ){
 	if(other.speed > 4 && punctureCooldownCurrent == 0 && other.status != 7 && (other.status != 8 || !other.lastBackStatus) ){
@@ -21,7 +19,7 @@ if( HP > 0 ){
 			direction = directionSword + 180 ;//+ random_range(-5,5);
 			speed = speedSword / 6 ;
 		}
-	
+		
 		HP -= eHPloose;
 		if(HP <= maxHP/2){
 			image_index = 1;
