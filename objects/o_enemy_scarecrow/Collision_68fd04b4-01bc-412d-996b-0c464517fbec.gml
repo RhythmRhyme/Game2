@@ -25,7 +25,7 @@ if( HP > 0 ){
 			image_index = 1;
 		}
 		if(other.status != 8 && other.status != 9){	//非入鞘or剑归状态
-			other.status = 2;
+			other.status = swordStates.puncture;
 		}
 		punctureCooldownCurrent = punctureCooldown;	
 		

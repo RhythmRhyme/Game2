@@ -1,0 +1,1 @@
+speed = lerp(speed, speedMax, speedAcceleration);

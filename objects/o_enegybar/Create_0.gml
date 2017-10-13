@@ -6,6 +6,8 @@ X = x - vcX;
 Y = y - vcY;
 
 xscale = 1;
+xscaleTransition = xscale;
 color = noone;
+
 
 depth = -room_height-11;

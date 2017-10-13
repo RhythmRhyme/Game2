@@ -1,20 +1,18 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description
 
 speedMax = 4;
-speedAcceleration = 0.5;
-slowdown = 0.5;
+speedAcceleration = 0.25;
+slowdown = 0.35;
+slowdownFall = 0.1;
 
 speedh = 0;
 speedv = 0;
-fallDown = 0;
-gravityV = 0.4;
+gravityV = 0.1;
 
 depth = -101;
-
 xscale = 1;
 
-standOnSword = 0;
+fallDown = 0;	//下落状态
 
 
 HP = 50;

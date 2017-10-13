@@ -1,1 +1,1 @@
-drewCooldown = 0;
+///@desc drewCooldown Counter
