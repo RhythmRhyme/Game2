@@ -1,18 +1,30 @@
 /// @description
 
 speedMax = 4;
-speedAcceleration = 0.25;
-slowdown = 0.35;
-slowdownFall = 0.1;
+speedAcceleration = 0.2;
+slowdown = 0.2;
+speedFlyMax = 5;
+speedFlyAcceleration = 0.1;
+speedFlyRotation = 0.1;
+slowdownFly = 0.1;
 
+speedFly = 0;
 speedh = 0;
 speedv = 0;
-gravityV = 0.1;
+gravityV = 0.15;
+dirFly = 0;
+
+enum playerStates{
+	stand = 0,
+	move = 1,
+	flyStart = 2,
+	fly = 3,
+	sit = 9
+}
+status = playerStates.stand;
 
 depth = -101;
 xscale = 1;
-
-fallDown = 0;	//下落状态
 
 
 HP = 50;

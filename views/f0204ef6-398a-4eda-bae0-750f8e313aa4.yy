@@ -10,7 +10,8 @@
         "49b6da8a-366d-477a-9a8d-c650e8601b36",
         "644ad148-001e-4bc0-971c-ebbcd4bf2fa0",
         "ae6ee93d-9a36-4417-9c4d-46fc76718d28",
-        "a1d9d034-163b-4454-97f4-aff0cacbaf49"
+        "a1d9d034-163b-4454-97f4-aff0cacbaf49",
+        "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b"
     ],
     "filterType": "GMScript",
     "folderName": "sword",

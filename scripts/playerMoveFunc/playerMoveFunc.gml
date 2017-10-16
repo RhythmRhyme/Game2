@@ -1,15 +1,113 @@
 
 var pressA = keyboard_check(ord("A"));
 var pressD = keyboard_check(ord("D"));
+var pressW = keyboard_check(ord("W"));
+var pressS = keyboard_check(ord("S"));
 var moveKey = abs(pressA - pressD);
+var updownKey = abs(pressW - pressS);
 
-if(!moveKey){
-	if(speedv == 0){
-		speedh = lerp(speedh, 0, slowdown);
+var onfloor = place_meeting(x,y+1,o_scene_static);
+
+
+// 起势
+if(status == playerStates.flyStart){
+	return;	
+}
+
+//站在地面
+if(onfloor){
+	//上下键
+	if(pressW){
+		//飞行开始
+		if(pressW){
+			sprite_index = s_player_jump;
+			image_speed = 1;
+			status = playerStates.flyStart;
+		}
+		
+	//移动
+	}else if(moveKey){
+		//移动加速度
+		if(pressA){
+			speedh = lerp(speedh, -speedMax, speedAcceleration);
+		}else {
+			speedh = lerp(speedh, speedMax, speedAcceleration);
+		}
+		sprite_index = s_player_walk;
+		
+	//未移动
+	}else{
+		speedh = slowdownPlayer(speedh, slowdown, 0.25);
+	}
+	
+	//实际移动
+	if(x + speedh < room_width && x + speedh > 0){
+		if(!place_meeting(x+speedh,y,o_scene_static)){
+			x += speedh;
+		}else{
+			//TODO 玩家与物体的距离小于一次移动的距离
+		}
+	}
+	//动画
+	var speedPers = abs(speedh) / speedMax;
+	if(speedPers == 0){
+		sprite_index = s_player_idle;
 		
 	}else{
-		speedh = lerp(speedh, 0, slowdownFall);
+		if(speedPers < 0.25) speedPers = 0.25;
+		sprite_index = s_player_walk;
+		image_speed = speedPers;
 	}
+
+//飞行
+}else{
+	sprite_index = s_player_falldown;
+	var playerXY = getPlayerXY();
+	var xAdd = 0;
+	var yAdd = 0;
+	if(pressA) xAdd -= 1;
+	if(pressD) xAdd += 1;
+	if(pressW) yAdd -= 1;
+	if(pressS) yAdd += 1;
+	if(xAdd != 0 || yAdd != 0){
+		//计算移动速度
+		dirFly = point_direction(playerXY[XI], playerXY[YI], playerXY[XI] + xAdd, playerXY[YI] + yAdd);
+		speedFly = lerp(speedFly, speedFlyMax, speedFlyAcceleration);
+		
+	}else{
+		//减速
+		dirFly = point_direction(playerXY[XI], playerXY[YI], playerXY[XI] + speedh, playerXY[YI] + speedv);
+		speedFly  = slowdownPlayer(speedFly, slowdownFly, 0);
+	}
+	speedh = lerp(speedh, lengthdir_x(speedFly,dirFly), speedFlyRotation);
+	speedv = lerp(speedv, lengthdir_y(speedFly,dirFly), speedFlyRotation);
+	
+	//实际移动
+	if(x + speedh < room_width && x + speedh > 0){
+		if(!place_meeting(x+speedh,y,o_scene_static)){
+			x += speedh;
+		}else{
+			//玩家与物体的距离小于一次移动的距离
+			if(place_meeting(x+speedh,y,o_scene_static)){
+				while(!place_meeting(x+sign(speedh),y,o_scene_static)){
+					x += sign(speedh);
+				}
+			}
+		}
+	}
+	if(y + speedv < room_height && y + speedv > 0){
+		if(!place_meeting(x,y+speedv,o_scene_static)){
+			y += speedv;
+		}else{		
+			//玩家与物体的距离小于一次移动的距离
+			if(place_meeting(x,y+speedv,o_scene_static)){
+				while(!place_meeting(x,y+sign(speedv),o_scene_static)){
+					y += sign(speedv);
+				}
+			}
+		}
+	}
+	
 }
 
 //面对方向
@@ -20,25 +118,3 @@ if(speedh > 0){
 	xscale = -1;
 	image_xscale = xscale;
 }
-
-//移动速度
-if(moveKey){
-	if(pressA){
-		speedh = lerp(speedh, -speedMax, speedAcceleration);
-	}else {
-		speedh = lerp(speedh, speedMax, speedAcceleration);
-	}
-}
-
-
-//左右移动
-if(x + speedh < room_width && x + speedh > 0){
-	if(!place_meeting(x+speedh,y,o_scene_static)){
-		x += speedh;
-		if(o_sword.status == 8)	o_sword.x += speedh;
-	}else{
-		//TODO 玩家与物体的距离小于一次移动的距离
-	}
-}
-
-return moveKey;
