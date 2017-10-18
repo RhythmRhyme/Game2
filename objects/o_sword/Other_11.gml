@@ -9,3 +9,5 @@ slowdownSword();
 mouseControl();
 
 commonStates();
+
+swordFlyConsume();

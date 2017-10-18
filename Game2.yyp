@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "185c51d5-d218-4508-be4d-f82d31a66021",
+            "Value": {
+                "id": "cc9e8018-9212-4ff2-827e-3f545b9ff63a",
+                "resourcePath": "sprites\\s_player_fly\\s_player_fly.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "18dcce09-be21-492d-9f31-a75d10c5cc02",
             "Value": {
                 "id": "39cda10d-fe31-4dff-ac68-60ec6b681448",
@@ -239,14 +247,6 @@
             }
         },
         {
-            "Key": "5c577ee3-31c3-42a3-8601-bffb6d8d7d7a",
-            "Value": {
-                "id": "730a8b21-4d63-4e50-88b8-7411a84b77ab",
-                "resourcePath": "scripts\\playerFlyFunc\\playerFlyFunc.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "5c6df27e-8d22-408d-ba6f-5c745a11fcc1",
             "Value": {
                 "id": "68e22d35-e0c9-4378-b15c-8312a7e10e6b",
@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "686e44a8-1d58-4791-bd5b-9381a9632ebd",
+            "Value": {
+                "id": "33ee02bf-f21e-46ba-b48e-6894e412b2e6",
+                "resourcePath": "scripts\\moveCloser\\moveCloser.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6986ba9c-d8bf-45ae-b9c7-c583f9065145",
             "Value": {
                 "id": "d9e9c502-261d-4188-b706-086036e8ee5b",
@@ -380,6 +388,14 @@
                 "id": "7c2f73be-3f82-4852-9464-f8536b7a0d90",
                 "resourcePath": "objects\\o_backgournd\\o_backgournd.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "92962e0c-1b77-4e0c-89fe-a07dd753f8c3",
+            "Value": {
+                "id": "cbeb7807-019f-4b98-ad38-ba85b27ccd44",
+                "resourcePath": "scripts\\swordFlyConsume\\swordFlyConsume.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -476,6 +492,14 @@
                 "id": "cbfe4e17-951f-420c-90bd-67aa57f689b5",
                 "resourcePath": "scripts\\directionTo\\directionTo.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b10afd4d-ab33-478d-adda-9b7f104e0482",
+            "Value": {
+                "id": "2729d6dc-334f-4861-a497-2382e8f7ee46",
+                "resourcePath": "sprites\\s_player_fly_dynamic\\s_player_fly_dynamic.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -714,9 +738,10 @@
         "ae6ee93d-9a36-4417-9c4d-46fc76718d28",
         "a1d9d034-163b-4454-97f4-aff0cacbaf49",
         "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b",
+        "92962e0c-1b77-4e0c-89fe-a07dd753f8c3",
         "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
-        "5c577ee3-31c3-42a3-8601-bffb6d8d7d7a",
-        "32732bab-6bca-472c-8bce-c7e6ac1f9ec2"
+        "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
+        "686e44a8-1d58-4791-bd5b-9381a9632ebd"
     ],
     "tutorial": ""
 }

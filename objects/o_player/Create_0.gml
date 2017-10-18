@@ -11,7 +11,7 @@ slowdownFly = 0.1;
 speedFly = 0;
 speedh = 0;
 speedv = 0;
-gravityV = 0.15;
+gravityV = 0.1;
 dirFly = 0;
 
 enum playerStates{
@@ -19,6 +19,7 @@ enum playerStates{
 	move = 1,
 	flyStart = 2,
 	fly = 3,
+	falldown = 4,
 	sit = 9
 }
 status = playerStates.stand;
