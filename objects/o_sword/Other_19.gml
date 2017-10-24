@@ -40,5 +40,3 @@ if(abs(playerX - x) < speed && abs(playerY - y) < speed && lastBackStatus ){
 	moveForward();
 				
 }
-
-mouseControl();

@@ -15,7 +15,7 @@ status = swordStates.inScabbard;
 
 lastBackStatus = 0;
 drewTime = 0;
-drewCooldown = room_speed;
+backCooldown = room_speed;
 
 speedAcceleration = 0.1;
 speedMax = 20;

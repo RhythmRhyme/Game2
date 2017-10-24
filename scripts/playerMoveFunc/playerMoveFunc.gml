@@ -15,25 +15,25 @@ if(status == playerStates.flyStart){
 }
 
 if(status == playerStates.stand || status == playerStates.move ){
-	var MPrecov = 10 / room_speed;
-	if(MP + MPrecov  > maxMP){
-		MP = maxMP;
+	var MPrecov = 10 / room_speed;	//0.16 per second
+	if(o_player_status.MP + MPrecov  > o_player_status.maxMP){
+		o_player_status.MP = o_player_status.maxMP;
 	}else{
-		MP += MPrecov;
+		o_player_status.MP += MPrecov;
 	}
 }else if(status == playerStates.fly){
 	var MPconsume = (speedFly + 5) / room_speed;
-	if(MP - MPconsume  < 0){
-		MP = 0;
+	if(o_player_status.MP - MPconsume  < 0){
+		o_player_status.MP = 0;
 	}else{
-		MP -= MPconsume;	
+		o_player_status.MP -= MPconsume;	
 	}
 }
 
 //站在地面
 if(onfloor){
 	//飞行开始
-	if(pressW && status != playerStates.fly){
+	if(pressW && status != playerStates.fly && MPEnough()){
 		sprite_index = s_player_jump;
 		image_index = 0;
 		image_speed = 1;
@@ -82,7 +82,7 @@ if(onfloor){
 
 }else{
 	//飞行
-	 if(MP > 0){
+	 if(o_player_status.MP > 0){
 		status = playerStates.fly;
 		sprite_index = s_player_fly;
 		var playerXY = getPlayerXY();

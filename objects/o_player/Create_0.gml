@@ -26,11 +26,3 @@ status = playerStates.stand;
 
 depth = -101;
 xscale = 1;
-
-
-HP = 50;
-maxHP = 50;
-MP = 90;
-maxMP = 90;
-
-DEF = 20;

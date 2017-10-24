@@ -2,10 +2,11 @@
 if( HP > 0 ){
 	if(other.speed > 4 && punctureCooldownCurrent == 0 && other.status != 7 && (other.status != 8 || !other.lastBackStatus) ){
 		var ATT = other.ATTMax;
-		var eHPloose = ATT * ATT / ( DEF + ATT ) ;	//伤害公式
+		//var eHPloose = ATT * ATT / ( DEF + ATT ) ;	//伤害公式
+		var eHPloose = ATT - DEF;
 		eHPloose = round(eHPloose * (other.speed / other.speedMax));	//根据速度减少伤害
 
-		if(eHPloose<1){
+		if(eHPloose < 1){
 			eHPloose = 1;
 		}
 		other.speed /= 1.33;
@@ -29,10 +30,11 @@ if( HP > 0 ){
 		}
 		punctureCooldownCurrent = punctureCooldown;	
 		
-		if(HP <= 0){
-			o_status_lvl.EXP += EXP;
+		if(eHPloose > 0){
+			var addEXP = round(eHPloose / maxHP * EXP);
+			o_player_status.EXP += addEXP;
 			//显示
-			o_dynamic_info.nextInfo = "gain EXP:" + string(EXP);
+			o_dynamic_info.nextInfo = "gain EXP:" + string(addEXP);
 			
 		}
 	}

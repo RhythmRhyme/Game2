@@ -4,6 +4,26 @@
 
 enegycaseInst = inst_4A5A6A60;
 
+enegybarEXP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,"status",o_enegybar);
+enegybarEXP.color = $7F4B0E;	//purple = $92278F;
+enegybarEXP.depth = -110;
+
+enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,"status",o_enegybar);
+enegybarMP.color = $F8941D;
+enegybarMP.depth = -111;
+
+enegybarExEXP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,"status",o_enegybar);
+enegybarExEXP.color = $EE1C24;
+enegybarExEXP.alpha = 0.25;
+enegybarExEXP.depth = -112;
+
+enegybarExEXPsides = instance_create_layer(enegycaseInst.x - o_enegy_sides.sprite_width,enegycaseInst.y,"status",o_enegy_sides);
+enegybarExEXPsides.depth = -113;
+enegybarExEXPsides.xscale = 0.2;
+
+//Next level
+
+
 //计算与镜头的距离
 var vcX = camera_get_view_x(view_camera[0]);
 var vcY = camera_get_view_y(view_camera[0]);
@@ -11,7 +31,7 @@ X = x - vcX;
 Y = y - vcY;
 
 
-lvlExp = [
+lvlEXP = [
 15,34,57,92,135,372,560,840,1240,1716,
 2360,3216,4200,5460,7050,8840,11040,13716,16680,20216,
 24420,28980,34320,40512,47216,54900,63666,73080,83720,95700,
@@ -33,9 +53,23 @@ lvlExp = [
 769777027,811960808,856456260,903390063,952895838,1005114529,1060194805,1118293480,1179575962,1244216724,
 1312399800,1384319309,1460180007,1540197871,1624600714,1713628833,1807535693,1906588648,2011069705,2121276324
 ];
-LVLtotal = 1;
+LVLtotal = 2;	///TODO set 1 after player sit function
 LVLstate = 1;
 state = ["筑基","开光","融合","心动","金丹","元婴","出窍","分神","合体","洞虚","大乘","渡劫"];
 //stateHigh = ["散仙","真仙","玄仙","金仙","太乙金仙","大罗金仙","圣人"];
 LVL = 1;
+maxEXP = lvlEXP[LVLtotal-1];
 EXP = 0;
+exEXP = 0;
+
+//额外经验值	//TODO DELETE after player sit function
+if(LVLtotal > 1){
+	exEXP = lvlEXP[LVLtotal-2];
+	EXP = exEXP;
+}
+
+
+maxMP = EXP;
+MP = maxMP;
+
+DEF = 0;

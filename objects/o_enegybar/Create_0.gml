@@ -5,6 +5,7 @@ var vcY = camera_get_view_y(view_camera[0]);
 X = x - vcX;
 Y = y - vcY;
 
+alpha = 1;
 xscale = 1;
 xscaleTransition = xscale;
 color = noone;

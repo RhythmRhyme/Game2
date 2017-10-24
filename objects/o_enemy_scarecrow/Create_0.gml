@@ -1,8 +1,8 @@
 
-maxHP = 40;
+maxHP = 32;
 HP = maxHP;
-EXP = 3;
-DEF = 8;
+EXP = maxHP;
+DEF = 4;
 
 punctureCooldown = 30;
 punctureCooldownCurrent = 0;

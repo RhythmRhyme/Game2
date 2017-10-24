@@ -1,1 +1,1 @@
-xscale = 1905;
+xscale = 1872;
