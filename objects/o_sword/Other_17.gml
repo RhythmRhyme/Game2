@@ -3,7 +3,7 @@
 var drewXY = getDrewXY();
 var directionDrew = point_direction(x, y, drewXY[XI], drewXY[YI]);
 direction = directionDrew;
-speed = 20;
+speed = speedMax/2;
 	
 var spriteH = o_player.sprite_height;
 var drewTimeTurn = sqrt(spriteH * spriteH + spriteH * spriteH) / speed;
@@ -13,7 +13,6 @@ if( drewTime > drewTimeTurn ){
 	image_angle = direction;
 	speed = speedAcceleration;
 	status = swordStates.flying;
-	
 }
 
 drewTime += 1;

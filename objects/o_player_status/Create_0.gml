@@ -1,24 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+layerId = layer_get_id("status");
+layerDepth = layer_get_depth(layerId);
 
 enegycaseInst = inst_4A5A6A60;
 
-enegybarEXP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,"status",o_enegybar);
+enegybarEXP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
 enegybarEXP.color = $7F4B0E;	//purple = $92278F;
-enegybarEXP.depth = -110;
+enegybarEXP.depth = layerDepth + 10;
 
-enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,"status",o_enegybar);
+enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
 enegybarMP.color = $F8941D;
-enegybarMP.depth = -111;
+enegybarMP.depth = layerDepth + 9;
 
-enegybarExEXP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,"status",o_enegybar);
+enegybarExEXP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
 enegybarExEXP.color = $EE1C24;
 enegybarExEXP.alpha = 0.25;
-enegybarExEXP.depth = -112;
+enegybarExEXP.depth = layerDepth + 8;
 
-enegybarExEXPsides = instance_create_layer(enegycaseInst.x - o_enegy_sides.sprite_width,enegycaseInst.y,"status",o_enegy_sides);
-enegybarExEXPsides.depth = -113;
+enegybarExEXPsides = instance_create_layer(enegycaseInst.x - o_enegy_sides.sprite_width,enegycaseInst.y,layerId,o_enegy_sides);
+enegybarExEXPsides.depth = layerDepth + 7;
 enegybarExEXPsides.xscale = 0.2;
 
 //Next level
@@ -71,5 +73,6 @@ if(LVLtotal > 1){
 
 maxMP = EXP;
 MP = maxMP;
+MPrecov = 0;
 
 DEF = 0;

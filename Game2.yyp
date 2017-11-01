@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "2130efbc-6cf3-436e-9efb-976a2973a705",
+            "Value": {
+                "id": "834813d1-7789-4114-994c-687f0685cbff",
+                "resourcePath": "scripts\\playerFlyMPCR\\playerFlyMPCR.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "22ff6e4f-0b44-482d-a591-4d35c14ca699",
             "Value": {
                 "id": "390ff905-6338-48d2-9630-448df263880e",
@@ -316,14 +324,6 @@
                 "id": "1483a5db-ce89-40c0-b722-437006c0ebc2",
                 "resourcePath": "views\\678a7087-43f5-4a35-bece-73c0ff3f7628.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "686e44a8-1d58-4791-bd5b-9381a9632ebd",
-            "Value": {
-                "id": "33ee02bf-f21e-46ba-b48e-6894e412b2e6",
-                "resourcePath": "scripts\\moveCloser\\moveCloser.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -725,8 +725,8 @@
         "92962e0c-1b77-4e0c-89fe-a07dd753f8c3",
         "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
         "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
-        "686e44a8-1d58-4791-bd5b-9381a9632ebd",
-        "81e4d561-565d-483f-8e1e-2d3126f1b0d0"
+        "81e4d561-565d-483f-8e1e-2d3126f1b0d0",
+        "2130efbc-6cf3-436e-9efb-976a2973a705"
     ],
     "tutorial": ""
 }

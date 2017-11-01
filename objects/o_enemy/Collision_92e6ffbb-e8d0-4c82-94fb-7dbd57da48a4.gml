@@ -1,10 +1,8 @@
 
 if( HP > 0 ){
-	if(other.speed > 4 && punctureCooldownCurrent == 0 && other.status != 7 && (other.status != 8 || !other.lastBackStatus) ){
-		var ATT = other.ATTMax;
-		//var eHPloose = ATT * ATT / ( DEF + ATT ) ;	//伤害公式
-		var eHPloose = ATT - DEF;
-		eHPloose = round(eHPloose * (other.speed / other.speedMax));	//根据速度减少伤害
+	if(other.speed > 4 && alarm[0] <= 0 && other.status != 7 && (other.status != 8 || !other.lastBackStatus) ){
+		var eHPloose = other.damage - DEF;
+		eHPloose = round(eHPloose * (other.speed / other.speedFullDMG));	//根据速度增加伤害
 
 		if(eHPloose < 1){
 			eHPloose = 1;
@@ -28,7 +26,8 @@ if( HP > 0 ){
 		if(other.status != 8 && other.status != 9){	//非入鞘or剑归状态
 			other.status = swordStates.puncture;
 		}
-		punctureCooldownCurrent = punctureCooldown;	
+		//受击冷却
+		alarm[0] = punctureCooldown;
 		
 		if(eHPloose > 0){
 			var addEXP = round(eHPloose / maxHP * EXP);

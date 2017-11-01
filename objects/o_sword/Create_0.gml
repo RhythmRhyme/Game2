@@ -17,11 +17,12 @@ lastBackStatus = 0;
 drewTime = 0;
 backCooldown = room_speed;
 
-speedAcceleration = 0.1;
-speedMax = 20;
+speedAcceleration = 0.05;
+speedMax = 40;
 slowdown = 0;	//slowdown = 0.25;
 rotationRate = 7.5;	//5-15
 
-ATTmin = 8;
-ATTMax = 16;
+speedFullDMG = 20;	//此速度造成最大伤害
+
+damage = 16;
 

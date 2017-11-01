@@ -14,21 +14,8 @@ if(status == playerStates.flyStart){
 	return;	
 }
 
-if(status == playerStates.stand || status == playerStates.move ){
-	var MPrecov = 10 / room_speed;	//0.16 per second
-	if(o_player_status.MP + MPrecov  > o_player_status.maxMP){
-		o_player_status.MP = o_player_status.maxMP;
-	}else{
-		o_player_status.MP += MPrecov;
-	}
-}else if(status == playerStates.fly){
-	var MPconsume = (speedFly + 5) / room_speed;
-	if(o_player_status.MP - MPconsume  < 0){
-		o_player_status.MP = 0;
-	}else{
-		o_player_status.MP -= MPconsume;	
-	}
-}
+//MP消耗/恢复
+playerFlyMPCR();
 
 //站在地面
 if(onfloor){
@@ -62,13 +49,14 @@ if(onfloor){
 	}
 	
 	//实际移动
-	if(x + speedh < room_width && x + speedh > 0){
-		if(!place_meeting(x+speedh,y,o_scene_static)){
-			x += speedh;
-		}else{
-			moveCloser(speedh, 0, o_scene_static);
+	if(place_meeting(x+speedh,y,o_scene_static)){
+		while(!place_meeting(x+sign(speedh),y,o_scene_static)){
+			x += sign(speedh);
 		}
+		speedh = 0;
 	}
+	x += round(speedh);
+		
 	//动画
 	var speedPers = abs(speedh) / speedMax;
 	if(speedPers == 0){
@@ -82,9 +70,8 @@ if(onfloor){
 
 }else{
 	//飞行
-	 if(o_player_status.MP > 0){
+	 if(MPEnough()){
 		status = playerStates.fly;
-		sprite_index = s_player_fly;
 		var playerXY = getPlayerXY();
 		var xAdd = 0;
 		var yAdd = 0;
@@ -96,30 +83,38 @@ if(onfloor){
 			//计算移动速度
 			dirFly = point_direction(playerXY[XI], playerXY[YI], playerXY[XI] + xAdd, playerXY[YI] + yAdd);
 			speedFly = lerp(speedFly, speedFlyMax, speedFlyAcceleration);
+			sprite_index = s_player_fly;
 		
 		}else{
 			//减速
 			dirFly = point_direction(playerXY[XI], playerXY[YI], playerXY[XI] + speedh, playerXY[YI] + speedv);
 			speedFly  = slowdownPlayer(speedFly, slowdownFly, 0);
+			
+			//漂浮效果
+			if(speedFly < 1){
+				sprite_index = s_player_fly_dynamic;
+			}
+			
 		}
 		speedh = lerp(speedh, lengthdir_x(speedFly,dirFly), speedFlyRotation);
 		speedv = lerp(speedv, lengthdir_y(speedFly,dirFly), speedFlyRotation);
 	
 		//实际移动
-		if(speedh!= 0 && x + speedh < room_width && x + speedh > 0){
-			if(!place_meeting(x+speedh,y,o_scene_static)){
-				x += speedh;
-			}else{
-				moveCloser(speedh, 0, o_scene_static);
+		if(place_meeting(x+speedh,y,o_scene_static)){
+			while(!place_meeting(x+sign(speedh),y,o_scene_static)){
+				x += sign(speedh);
 			}
+			speedh = 0;
 		}
-		if(speedv!= 0 && y + speedv < room_height && y + speedv > 0){
-			if(!place_meeting(x,y+speedv,o_scene_static)){
-				y += speedv;
-			}else{		
-				moveCloser(0,speedv,o_scene_static);
+		x += round(speedh);
+		
+		if(place_meeting(x,y+speedv,o_scene_static)){
+			while(!place_meeting(x,y+sign(speedv),o_scene_static)){
+				y += sign(speedv);
 			}
+			speedv = 0;
 		}
+		y += round(speedv);
 		
 	//下落
 	 }else{
@@ -143,25 +138,27 @@ if(onfloor){
 			speedFly  = slowdownPlayer(speedFly, slowdownFly, 0);
 		}
 		var falldownSpeed = lengthdir_y(speedFly,dirFly);
+		//最小下落速度
 		if(falldownSpeed < 3) falldownSpeed = 3;
 		speedh = lerp(speedh, lengthdir_x(speedFly,dirFly), speedFlyRotation);
 		speedv = lerp(speedv, falldownSpeed, gravityV);
 			
 		//实际移动
-		if(speedh!= 0 && x + speedh < room_width && x + speedh > 0){
-			if(!place_meeting(x+speedh,y,o_scene_static)){
-				x += speedh;
-			}else{
-				moveCloser(speedh, 0, o_scene_static);
+		if(place_meeting(x+speedh,y,o_scene_static)){
+			while(!place_meeting(x+sign(speedh),y,o_scene_static)){
+				x += sign(speedh);
 			}
+			speedh = 0;
 		}
-		if(speedv!= 0 && y + speedv < room_height && y + speedv > 0){
-			if(!place_meeting(x,y+speedv,o_scene_static)){
-				y += speedv;
-			}else{		
-				moveCloser(0,speedv,o_scene_static);
+		x += round(speedh);
+		
+		if(place_meeting(x,y+speedv,o_scene_static)){
+			while(!place_meeting(x,y+sign(speedv),o_scene_static)){
+				y += sign(speedv);
 			}
+			speedv = 0;
 		}
+		y += round(speedv);
 	 }
 	
 }

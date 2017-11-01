@@ -5,4 +5,3 @@ EXP = maxHP;
 DEF = 4;
 
 punctureCooldown = 30;
-punctureCooldownCurrent = 0;

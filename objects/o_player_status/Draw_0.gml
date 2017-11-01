@@ -20,3 +20,8 @@ if(LVL + 1 > 9){
 	showLVL++;
 }
 draw_text(vcX + enegycaseInst.image_xscale - 25, vcY + Y, state[showLVLstate-1] +" "+ string(showLVL));
+
+//恢复数值
+draw_set_font(noone);
+var pointRight = string(floor(MPrecov*1000) - floor(MPrecov*100)*10);
+draw_text(vcX + enegybarExEXPsides.X, vcY + Y - 38, "+"+ string(floor(MPrecov*100)) + "." + pointRight);

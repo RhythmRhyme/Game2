@@ -1,8 +1,8 @@
 {
-    "id": "686e44a8-1d58-4791-bd5b-9381a9632ebd",
+    "id": "2130efbc-6cf3-436e-9efb-976a2973a705",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "moveCloser",
+    "name": "playerFlyMPCR",
     "IsCompatibility": false,
     "IsDnD": false
 }
