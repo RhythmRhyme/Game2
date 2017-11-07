@@ -231,6 +231,22 @@
             }
         },
         {
+            "Key": "55cf5d35-b33c-40d8-b509-5df30323ce07",
+            "Value": {
+                "id": "86775d6b-1eb9-4029-944c-a7f47138ba5c",
+                "resourcePath": "scripts\\getCameraXY\\getCameraXY.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5610e101-a3ee-401c-be68-68c7d512d51f",
+            "Value": {
+                "id": "ac11689a-4b85-4fd6-87eb-2779f53de953",
+                "resourcePath": "views\\5610e101-a3ee-401c-be68-68c7d512d51f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "58ce7085-de77-4818-bfc6-82a0f943c407",
             "Value": {
                 "id": "1a96a028-4378-4004-ade7-3b4ea8f8cbd6",
@@ -695,14 +711,6 @@
             }
         },
         {
-            "Key": "fe75279d-216e-4eb1-8085-7f0fda4468c8",
-            "Value": {
-                "id": "08f1f1ee-6bd3-497a-ac5b-e2c114e217f8",
-                "resourcePath": "sprites\\s_EXP\\s_EXP.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "fe966653-9b13-4178-9de5-126fbeb1cf3a",
             "Value": {
                 "id": "cdc523e3-4c0e-4bee-91c6-f96618f093da",
@@ -726,7 +734,8 @@
         "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
         "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
         "81e4d561-565d-483f-8e1e-2d3126f1b0d0",
-        "2130efbc-6cf3-436e-9efb-976a2973a705"
+        "2130efbc-6cf3-436e-9efb-976a2973a705",
+        "55cf5d35-b33c-40d8-b509-5df30323ce07"
     ],
     "tutorial": ""
 }
