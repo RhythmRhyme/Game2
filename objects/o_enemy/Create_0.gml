@@ -1,7 +1,8 @@
 
 maxHP = 1;
 HP = maxHP;
-EXP = maxHP;
+maxMP = 1;
+MP = maxMP;
 DEF = 0;
 
 punctureCooldown = 30;

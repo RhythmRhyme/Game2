@@ -6,4 +6,6 @@ if(xscale > xscaleTransition){
 }
 
 var cXY = getCameraXY();
-draw_sprite_ext(s_enegybar, 1, x + cXY[XI], y + cXY[YI], xscaleTransition, 1, 0, color, alpha );
+draw_set_colour(color);
+draw_rectangle(x + cXY[XI], y + cXY[YI],x + cXY[XI] + xscale, y + cXY[YI] - 16, false);
+draw_set_colour(noone);

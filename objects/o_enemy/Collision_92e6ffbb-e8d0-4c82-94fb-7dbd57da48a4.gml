@@ -23,18 +23,18 @@ if( HP > 0 ){
 		if(HP <= maxHP/2){
 			image_index = 1;
 		}
+		
+		if(HP <= 0){
+			o_player_status.MP += maxMP;
+			o_dynamic_info.nextInfo = "gain MP:" + string(maxMP);
+			o_room.totalMonster--;
+		}
+		
 		if(other.status != 8 && other.status != 9){	//非入鞘or剑归状态
 			other.status = swordStates.puncture;
 		}
 		//受击冷却
 		alarm[0] = punctureCooldown;
 		
-		if(eHPloose > 0){
-			var addEXP = round(eHPloose / maxHP * EXP);
-			o_player_status.EXP += addEXP;
-			//显示
-			o_dynamic_info.nextInfo = "gain EXP:" + string(addEXP);
-			
-		}
 	}
 }

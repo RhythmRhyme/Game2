@@ -1,22 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
 
-layerId = layer_get_id("status");
-layerDepth = layer_get_depth(layerId);
-
-enegycaseInst = inst_4A5A6A60;
-enegysidesInst = inst_4435A871;
-
-enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
-enegybarMP.color = $F8941D;
-enegybarMP.depth = layerDepth + 10;
-
-enegybarEXP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
-enegybarEXP.color = $7F4B0E;	//purple = $92278F;
-enegybarEXP.depth = layerDepth + 9;
-//enegybarEXP.image_alpha = 0.5;
-
-lvlEXP = [
+lvlMP = [
 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
 60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
@@ -41,9 +24,17 @@ lvlEXP = [
 
 lvl = 0;
 
-maxEXP = lvlEXP[lvl];
-EXP = 0;
-
-maxMP = lvlEXP[lvl];
-MP = maxMP;
+maxMP = lvlMP[lvl];
+MP = 0;
 MPrecov = 0;
+
+
+layerId = layer_get_id("status");
+layerDepth = layer_get_depth(layerId);
+
+enegycaseInst = inst_4A5A6A60;
+enegysidesInst = inst_4435A871;
+
+enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
+enegybarMP.color = make_colour_rgb(25, 200-floor(maxMP/5), 255);
+enegybarMP.depth = layerDepth + 10;

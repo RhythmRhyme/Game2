@@ -1,21 +1,21 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-if(EXP >= lvlEXP[lvl+1] && lvl <= array_length_1d(lvlEXP)+1){
-	//获得的经验的溢出
-	overflowEXP = EXP - lvlEXP[lvl];	
-	lvl++;
-	maxEXP = lvlEXP[lvl];
-	EXP = overflowEXP;
-	maxMP = lvlEXP[lvl];
-	MP = maxMP;
-	enegycaseInst.xscale = lvlEXP[lvl] * 7;
-	enegysidesInst.x = enegycaseInst.x + enegycaseInst.xscale + abs(enegysidesInst.sprite_width);
-	x = enegysidesInst.x;
+show_debug_message(array_length_1d(lvlMP))
+if(lvl+1 < array_length_1d(lvlMP)){
+	if(MP >= lvlMP[lvl]){
+		//获得的经验的溢出
+		overflowMP = MP - lvlMP[lvl];
+		MP = overflowMP;
+		lvl++;
+		maxMP = lvlMP[lvl];
+		enegybarMP.color = make_colour_rgb(25, 300-maxMP, 255);
+		enegycaseInst.xscale = lvlMP[lvl] * 7;
+		enegysidesInst.x = enegycaseInst.x + enegycaseInst.xscale + abs(enegysidesInst.sprite_width);
+		x = enegysidesInst.x;
+	}
 }
 
-//EXP
-enegybarEXP.xscale = floor(EXP * enegycaseInst.xscale / maxEXP);
-
 //MP
-enegybarMP.xscale = floor(MP / maxMP * enegybarEXP.xscale);
+if(MP <= maxMP){
+	enegybarMP.xscale = floor(MP * enegycaseInst.xscale / maxMP);
+}else{
+	enegybarMP.xscale = floor(enegycaseInst.xscale);
+}

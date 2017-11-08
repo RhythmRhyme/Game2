@@ -1,9 +1,7 @@
 //恢复
 var MPrecov = 0.5 / room_speed;
 o_player_status.MPrecov = MPrecov * room_speed;
-if(o_player_status.MP + MPrecov  > o_player_status.maxMP){
-	o_player_status.MP = o_player_status.maxMP;
-}else{
+if(o_player_status.MP + MPrecov  < o_player_status.maxMP){
 	o_player_status.MP += MPrecov;
 }
 

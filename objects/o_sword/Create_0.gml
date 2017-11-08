@@ -18,7 +18,7 @@ drewTime = 0;
 backCooldown = room_speed;
 
 speedAcceleration = 0.05;
-speedMax = 40;
+speedMax = 32;
 slowdown = 0;	//slowdown = 0.25;
 rotationRate = 7.5;	//5-15
 

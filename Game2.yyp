@@ -103,10 +103,18 @@
             }
         },
         {
+            "Key": "27fe9e5a-7977-4a89-9c91-6d59a80e695b",
+            "Value": {
+                "id": "cfff9f84-3be9-4070-bf18-daf518438129",
+                "resourcePath": "objects\\o_room\\o_room.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2da0cf58-c492-4d4a-b2ab-034c694ea77e",
             "Value": {
                 "id": "b49ffdb1-274c-4d30-a3d7-4366e27a40fc",
-                "resourcePath": "rooms\\room_0\\room_0.yy",
+                "resourcePath": "rooms\\r_one\\r_one.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -252,14 +260,6 @@
                 "id": "1a96a028-4378-4004-ade7-3b4ea8f8cbd6",
                 "resourcePath": "sounds\\sound0\\sound0.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "59428eae-e14c-40e6-ae20-fd4542efa3ab",
-            "Value": {
-                "id": "1a291a11-ecbc-4b9b-b060-8df960d03ff2",
-                "resourcePath": "sprites\\s_enegybar\\s_enegybar.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "c0ca4860-d55b-47fa-b4c7-0442c7a22434",
+            "Value": {
+                "id": "d6ce2a37-f8f7-459e-b95d-7757a8f36266",
+                "resourcePath": "sprites\\s_enemy_spawn\\s_enemy_spawn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c9a57bee-f90a-4541-b8c5-833692a65e3d",
             "Value": {
                 "id": "3f2b7ad2-ab93-4c97-973e-1dffdd38ce62",
@@ -691,6 +699,14 @@
             "Value": {
                 "id": "3376b577-35f3-47fc-9e93-cbc6ee8bb8b2",
                 "resourcePath": "objects\\o_enegy_case\\o_enegy_case.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f5670b77-fdb1-4ffc-b311-297cb17d81f7",
+            "Value": {
+                "id": "a57ba263-fcaa-4a01-8a56-9edfb1af04ed",
+                "resourcePath": "objects\\o_enemy_spawn\\o_enemy_spawn.yy",
                 "resourceType": "GMObject"
             }
         },
