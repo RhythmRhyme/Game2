@@ -1,7 +1,7 @@
 
 if(debug_mode){
-	var vpX = camera_get_view_x(view_camera[0]) + 20;
-	var vpY = camera_get_view_y(view_camera[0]) + 20;
+	var vpX = x + camera_get_view_x(view_camera[0]);
+	var vpY = y + camera_get_view_y(view_camera[0]);
 
 	draw_set_font(noone);
 	draw_text(vpX,vpY,"o_sword.status = "+string(o_sword.status));

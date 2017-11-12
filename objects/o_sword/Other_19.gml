@@ -38,5 +38,6 @@ if(abs(playerX - x) < speed && abs(playerY - y) < speed && lastBackStatus ){
 	directionTo(direction_);
 		
 	moveForward();
-				
+	
+	mouseControl();
 }

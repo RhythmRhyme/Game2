@@ -1,1 +1,1 @@
-xscale = 350;
+xscale = 270;

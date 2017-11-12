@@ -14,7 +14,7 @@ if(status == playerStates.flyStart){
 	return;	
 }
 
-//MP消耗/恢复
+//MP消耗
 playerFlyMPCR();
 
 //站在地面
@@ -72,6 +72,7 @@ if(onfloor){
 	//飞行
 	 if(MPEnough()){
 		status = playerStates.fly;
+		sprite_index = s_player_fly;
 		var playerXY = getPlayerXY();
 		var xAdd = 0;
 		var yAdd = 0;
@@ -83,16 +84,15 @@ if(onfloor){
 			//计算移动速度
 			dirFly = point_direction(playerXY[XI], playerXY[YI], playerXY[XI] + xAdd, playerXY[YI] + yAdd);
 			speedFly = lerp(speedFly, speedFlyMax, speedFlyAcceleration);
-			sprite_index = s_player_fly;
 		
 		}else{
 			//减速
 			dirFly = point_direction(playerXY[XI], playerXY[YI], playerXY[XI] + speedh, playerXY[YI] + speedv);
 			speedFly  = slowdownPlayer(speedFly, slowdownFly, 0);
 			
-			//漂浮效果
+			//TODO 漂浮效果
 			if(speedFly < 1){
-				sprite_index = s_player_fly_dynamic;
+				
 			}
 			
 		}

@@ -1,8 +1,8 @@
 
-maxHP = 32;
-HP = maxHP;
-maxMP = 10000;
+maxMP = 250;
 MP = maxMP;
-DEF = 4;
+maxHP = maxMP*(maxMP+1)/2;
+HP = maxHP;
+DEF = 0;
 
 punctureCooldown = 30;

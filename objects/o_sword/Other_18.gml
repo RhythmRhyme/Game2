@@ -10,7 +10,7 @@ direction = image_angle;
 
 //出鞘
 var mouseLeft = mouse_check_button(mb_left);
-if(mouseLeft && MPEnough()){
+if(mouseLeft){
 	var drewXY = getDrewXY();
 	var directionDrew = point_direction(x, y, drewXY[XI], drewXY[YI]);
 	direction = directionDrew;

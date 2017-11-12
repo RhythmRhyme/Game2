@@ -15,8 +15,8 @@ if( HP > 0 ){
 		var inst = instance_create_layer(other.x+32,other.y,"instances",o_HPloose_enemy);
 		with(inst){
 			HPloose = eHPloose;
-			direction = directionSword + 180 ;//+ random_range(-5,5);
-			speed = speedSword / 6 ;
+			direction = directionSword + random_range(-3,3);
+			speed = speedSword / 2 ;
 		}
 		
 		HP -= eHPloose;
@@ -26,7 +26,8 @@ if( HP > 0 ){
 		
 		if(HP <= 0){
 			o_player_status.MP += maxMP;
-			o_dynamic_info.nextInfo = "gain MP:" + string(maxMP);
+			o_dynamic_info.nextInfo = "+" + string(maxMP);
+			o_dynamic_info.nextInfoX = o_enegybar.x + o_enegybar.xscale;
 			o_room.totalMonster--;
 		}
 		

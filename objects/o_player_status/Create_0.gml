@@ -26,15 +26,22 @@ lvl = 0;
 
 maxMP = lvlMP[lvl];
 MP = 0;
-MPrecov = 0;
+MPrecov = 1;
 
 
 layerId = layer_get_id("status");
 layerDepth = layer_get_depth(layerId);
 
 enegycaseInst = inst_4A5A6A60;
-enegysidesInst = inst_4435A871;
+sidesLeft = inst_4E0F5338;
+sidesRight = inst_4435A871;
+//每次升级MP框增加的宽度
+var c = getCamera();
+addLength = floor((c[2] - enegycaseInst.xscale) / array_length_1d(lvlMP));
 
 enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
 enegybarMP.color = make_colour_rgb(25, 200-floor(maxMP/5), 255);
 enegybarMP.depth = layerDepth + 10;
+
+
+alarm[0] = room_speed;

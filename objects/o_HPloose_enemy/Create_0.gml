@@ -3,5 +3,5 @@
 HPloose = 0;
 showed = 0;
 depth = -room_height-1
-alpha = 0.75;
+alpha = 1;
 alphaReduce = 0;

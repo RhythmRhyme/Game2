@@ -1,11 +1,10 @@
-
-var mouseLeft = mouse_check_button(mb_left);
 var mouseRight = mouse_check_button(mb_right);
-if(mouseLeft && MPEnough()){
-	moveForward();
-	status = swordStates.flying;
-}else if(mouseRight && alarm[0] <= 0){
+var mouseLeft = mouse_check_button(mb_left);
+if(mouseRight && alarm[0] <= 0){
 	status = swordStates.back;	//剑归
 	lastBackStatus = 0;			//未到达出鞘落点
 	alarm[0] = backCooldown;	//剑归冷却
+}else if(mouseLeft || status != swordStates.back){
+	moveForward();
+	status = swordStates.flying;
 }
