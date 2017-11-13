@@ -1,5 +1,10 @@
 /// @description
 
+layerId = layer_get_id("Instances");
+depth = layer_get_depth(layerId);
+
+xscale = 1;
+
 speedMax = 4;
 speedAcceleration = 0.2;
 slowdown = 0.2;
@@ -19,10 +24,6 @@ enum playerStates{
 	move = 1,
 	flyStart = 2,
 	fly = 3,
-	falldown = 4,
 	sit = 9
 }
 status = playerStates.stand;
-
-depth = -101;
-xscale = 1;

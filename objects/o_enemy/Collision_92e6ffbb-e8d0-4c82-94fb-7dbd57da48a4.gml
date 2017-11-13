@@ -2,7 +2,8 @@
 if( HP > 0 ){
 	if(other.speed > 4 && alarm[0] <= 0 && other.status != 7 && (other.status != 8 || !other.lastBackStatus) ){
 		var eHPloose = other.damage - DEF;
-		eHPloose = round(eHPloose * (other.speed / other.speedFullDMG));	//根据速度增加伤害
+		var dmgPercent = other.speed / other.speedFullDMG;	//速度影响伤害
+		eHPloose = round(eHPloose * dmgPercent);	
 
 		if(eHPloose < 1){
 			eHPloose = 1;
@@ -16,13 +17,11 @@ if( HP > 0 ){
 		with(inst){
 			HPloose = eHPloose;
 			direction = directionSword + random_range(-3,3);
-			speed = speedSword / 2 ;
+			speed = speedSword * 0.25;
+			scale = dmgPercent;
 		}
 		
 		HP -= eHPloose;
-		if(HP <= maxHP/2){
-			image_index = 1;
-		}
 		
 		if(HP <= 0){
 			o_player_status.MP += maxMP;

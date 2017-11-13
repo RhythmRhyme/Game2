@@ -1,7 +1,7 @@
 
 if(HP <=0){
-	if(sprite_index != s_enemy_scarecrow_dead)
-		sprite_index = s_enemy_scarecrow_dead;
+	if(sprite_index != sprite_dead)
+		sprite_index = sprite_dead;
 	
 	//渐隐消失
 	if(image_alpha <= 0){
@@ -9,6 +9,11 @@ if(HP <=0){
 	}else{
 		image_alpha = image_alpha - 1/room_speed;
 	}
-	return 0;
+	exit;
 	
+}else{
+	//刷怪渐显
+	if(image_alpha < 1){
+		image_alpha = image_alpha + 1/room_speed;
+	}
 }

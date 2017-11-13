@@ -3,5 +3,3 @@
 mouseControl();
 
 commonStates();
-
-swordFlyConsume();

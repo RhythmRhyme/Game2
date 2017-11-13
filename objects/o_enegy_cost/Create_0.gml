@@ -1,0 +1,1 @@
+depth = o_player_status.enegybarMP.depth - 1;

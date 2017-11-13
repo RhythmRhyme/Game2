@@ -32,7 +32,7 @@ if(HPloose >0){
 	var alphaTemp = draw_get_alpha();
 	alpha -= alphaReduce;
 	draw_set_alpha(alpha);
-	draw_text(x,y,HPloose);
+	draw_text_transformed(x, y, HPloose, scale, scale, 0);
 	draw_set_alpha(alphaTemp);
 	if(!showed)	alarm[0] = room_speed/2;
 	showed = 1;

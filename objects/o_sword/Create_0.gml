@@ -1,7 +1,12 @@
 /// @description
 
-depth = -100;
+layerId = layer_get_id("Instances");
+depth = layer_get_depth(layerId);
+
 image_angle = 300;
+
+//skill etc
+boostInst = noone;
 
 enum swordStates{
 	static = 0,		//剑止
@@ -24,5 +29,5 @@ rotationRate = 12;	//5-15
 
 speedFullDMG = speedMax;	//此速度造成最大伤害
 
-damage = 30000;
+damage = 10;
 

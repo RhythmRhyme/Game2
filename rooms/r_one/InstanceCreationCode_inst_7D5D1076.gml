@@ -1,1 +1,1 @@
-monster = o_enemy_scarecrow;
+monster = o_enemy_muzhuang;

@@ -41,7 +41,14 @@ addLength = floor((c[2] - enegycaseInst.xscale) / array_length_1d(lvlMP));
 
 enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
 enegybarMP.color = make_colour_rgb(25, 200-floor(maxMP/5), 255);
-enegybarMP.depth = layerDepth + 10;
+enegybarMP.depth = layerDepth - 10;
+enegybarMP.type = enegyBarType.MAIN;
+
+enegybarMPTrans = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
+enegybarMPTrans.color = c_gray;
+enegybarMPTrans.depth = enegybarMP.depth + 1;
+enegybarMPTrans.image_alpha = 0.5;
+enegybarMPTrans.type = enegyBarType.TRANS;
 
 
 alarm[0] = room_speed;

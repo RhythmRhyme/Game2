@@ -12,6 +12,7 @@ if(lvl+1 < array_length_1d(lvlMP)){
 		sidesLeft.x = enegycaseInst.x - 3;
 		sidesRight.x = enegycaseInst.x + enegycaseInst.xscale + abs(sidesRight.sprite_width);
 		enegybarMP.x = enegycaseInst.x;
+		enegybarMPTrans.x = enegybarMP.x;
 	}
 }
 
@@ -21,4 +22,13 @@ if(MP <= maxMP){
 }else{
 	enegybarMP.xscale = floor(enegycaseInst.xscale);
 }
-MPrecov = maxMP / 60;
+enegybarMPTrans.xscale = enegybarMP.xscale;
+
+//MP恢复量
+if(o_player.status == playerStates.move || o_player.status == playerStates.stand){
+	MPrecov = maxMP / 60;
+}else if(o_player.status == playerStates.sit){
+	MPrecov = maxMP / 30;
+}else{
+	MPrecov = 0;
+}

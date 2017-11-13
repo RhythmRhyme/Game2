@@ -47,6 +47,22 @@
             }
         },
         {
+            "Key": "0ce2572c-b464-498f-a431-edeaa6e30916",
+            "Value": {
+                "id": "e0d49621-f619-44b0-91ae-c7fda2b46114",
+                "resourcePath": "views\\0ce2572c-b464-498f-a431-edeaa6e30916.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "111568ef-1961-4934-9dd9-2908f88f544a",
+            "Value": {
+                "id": "e63b51fc-36a1-4ee7-9cc8-3ea9ca8f34b1",
+                "resourcePath": "sprites\\s_player_level\\s_player_level.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "185c51d5-d218-4508-be4d-f82d31a66021",
             "Value": {
                 "id": "cc9e8018-9212-4ff2-827e-3f545b9ff63a",
@@ -63,18 +79,10 @@
             }
         },
         {
-            "Key": "2130efbc-6cf3-436e-9efb-976a2973a705",
-            "Value": {
-                "id": "834813d1-7789-4114-994c-687f0685cbff",
-                "resourcePath": "scripts\\playerFlyMPCR\\playerFlyMPCR.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "22ff6e4f-0b44-482d-a591-4d35c14ca699",
             "Value": {
                 "id": "390ff905-6338-48d2-9630-448df263880e",
-                "resourcePath": "sprites\\s_enemy_scarecrow_dead\\s_enemy_scarecrow_dead.yy",
+                "resourcePath": "sprites\\s_enemy_muzhuang_dead\\s_enemy_muzhuang_dead.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -111,6 +119,14 @@
             }
         },
         {
+            "Key": "2e18f16f-6546-4244-9a7b-464c3d09104c",
+            "Value": {
+                "id": "16f1eb1e-9aec-4a3e-be65-317bb7ba2a49",
+                "resourcePath": "views\\2e18f16f-6546-4244-9a7b-464c3d09104c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
             "Value": {
                 "id": "1e081395-fcac-49a5-9c0e-531d6a57ee9c",
@@ -132,6 +148,14 @@
                 "id": "b59ea994-bd76-4e80-b1c9-650fbe875349",
                 "resourcePath": "views\\350fe9a6-74d4-4411-9137-b1afa90a427a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "37e0fbd4-a2df-4e73-a945-4d01f242789c",
+            "Value": {
+                "id": "f44acca9-4229-45ed-8669-4f0eba81131a",
+                "resourcePath": "scripts\\playerFly\\playerFly.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -175,6 +199,14 @@
             }
         },
         {
+            "Key": "4aa6903d-7e56-4485-8689-17a91da00f8e",
+            "Value": {
+                "id": "b3e2727a-f236-4f47-b33c-1a132e08d8ad",
+                "resourcePath": "sprites\\s_player_sit\\s_player_sit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4ab583a9-91f6-42d5-8298-460cdf226266",
             "Value": {
                 "id": "17412333-50f0-4bc0-a13c-aee62ee6e045",
@@ -199,11 +231,27 @@
             }
         },
         {
+            "Key": "503edc72-0933-4c5c-a922-fce8ce47227f",
+            "Value": {
+                "id": "e7731d0d-58a4-4003-bc03-e52ba625e53b",
+                "resourcePath": "sprites\\s_sword_boost\\s_sword_boost.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5043edec-b4fe-4fea-9742-85e605bac4d9",
             "Value": {
                 "id": "6c751454-467e-4fc5-866b-ccd0a5a515df",
                 "resourcePath": "sprites\\s_HPloose_enemy\\s_HPloose_enemy.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "519d8652-c1e8-49ef-a2b9-a0595cdf6429",
+            "Value": {
+                "id": "81270dc3-c92c-4697-bf6c-d7c79a5e33e0",
+                "resourcePath": "objects\\o_enemy_bloodcrow\\o_enemy_bloodcrow.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -367,10 +415,26 @@
             }
         },
         {
+            "Key": "7a18d7bc-9b7a-4793-a73a-119a8601a718",
+            "Value": {
+                "id": "0b6d222b-18dd-4fef-b526-cce612877927",
+                "resourcePath": "sprites\\s_enemy_bloodcrow_dead\\s_enemy_bloodcrow_dead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7abf407e-0622-4250-8a97-c5678b6865ea",
+            "Value": {
+                "id": "f75820a3-2bff-4d27-8d7f-184fcf0533f6",
+                "resourcePath": "views\\7abf407e-0622-4250-8a97-c5678b6865ea.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7aef6286-9591-4914-98ee-30b0fc3e074b",
             "Value": {
                 "id": "850713f7-0a93-4d3d-b188-da395ff0f9a5",
-                "resourcePath": "sprites\\s_enemy_scarecrow\\s_enemy_scarecrow.yy",
+                "resourcePath": "sprites\\s_enemy_muzhuang\\s_enemy_muzhuang.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -383,14 +447,6 @@
             }
         },
         {
-            "Key": "81e4d561-565d-483f-8e1e-2d3126f1b0d0",
-            "Value": {
-                "id": "cee94a88-9bb9-47f0-8966-a506eadd9078",
-                "resourcePath": "scripts\\MPEnough\\MPEnough.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "8cdfd416-2ccc-4067-90c0-5f4c4db516cd",
             "Value": {
                 "id": "7c2f73be-3f82-4852-9464-f8536b7a0d90",
@@ -399,11 +455,11 @@
             }
         },
         {
-            "Key": "92962e0c-1b77-4e0c-89fe-a07dd753f8c3",
+            "Key": "8d899703-d783-4f54-8c6a-11c9b0b9352c",
             "Value": {
-                "id": "cbeb7807-019f-4b98-ad38-ba85b27ccd44",
-                "resourcePath": "scripts\\swordFlyConsume\\swordFlyConsume.yy",
-                "resourceType": "GMScript"
+                "id": "dbe980e2-bdb5-4422-a565-651b5db2a75e",
+                "resourcePath": "sprites\\s_enegy_cost\\s_enegy_cost.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -415,10 +471,18 @@
             }
         },
         {
+            "Key": "9745b35d-a42c-4ac6-ae08-156655283ec8",
+            "Value": {
+                "id": "4bdcc943-3fae-40b1-8a36-2f7a2be7c900",
+                "resourcePath": "sprites\\s_enemy_bloodcrow\\s_enemy_bloodcrow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
             "Value": {
                 "id": "438be49f-bac0-4c5d-b0aa-b630e7455ed3",
-                "resourcePath": "scripts\\playerMoveFunc\\playerMoveFunc.yy",
+                "resourcePath": "scripts\\playerMove\\playerMove.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -495,11 +559,27 @@
             }
         },
         {
+            "Key": "b0e821d2-9640-421a-aa4f-bc6bd8140079",
+            "Value": {
+                "id": "d1c6a268-81de-4bc3-afc1-e0707ed52da5",
+                "resourcePath": "scripts\\swordBoost\\swordBoost.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b10afd4d-ab33-478d-adda-9b7f104e0482",
             "Value": {
                 "id": "2729d6dc-334f-4861-a497-2382e8f7ee46",
                 "resourcePath": "sprites\\s_player_fly_dynamic\\s_player_fly_dynamic.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b2fcea7c-95bc-4c53-9f9a-d7f818cd72b8",
+            "Value": {
+                "id": "145e99b3-f2cc-4d9e-a0ac-0b90e8b1d52a",
+                "resourcePath": "objects\\o_enegy_cost\\o_enegy_cost.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -623,6 +703,14 @@
             }
         },
         {
+            "Key": "d451947b-cf25-4b83-b66b-3692832f9417",
+            "Value": {
+                "id": "5a2c794e-3ede-40c8-9fa9-2de084267312",
+                "resourcePath": "views\\d451947b-cf25-4b83-b66b-3692832f9417.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "dd4dcf8f-d307-400d-9d5c-0709c4477cf1",
             "Value": {
                 "id": "78ede825-1799-4bdc-bc29-6c513627d37f",
@@ -666,7 +754,7 @@
             "Key": "f3c1be06-be34-40b3-87b4-7baab7af29a0",
             "Value": {
                 "id": "029d27f3-dd98-4b2d-bf20-483ecc168ff6",
-                "resourcePath": "objects\\o_enemy_scarecrow\\o_enemy_scarecrow.yy",
+                "resourcePath": "objects\\o_enemy_muzhuang\\o_enemy_muzhuang.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -717,6 +805,14 @@
                 "resourcePath": "objects\\o_player_status\\o_player_status.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "ffeff80a-10d8-4254-adf8-4e9e3500ca20",
+            "Value": {
+                "id": "adb66540-c013-4f0f-9e98-9c5332554034",
+                "resourcePath": "objects\\o_sword_boost\\o_sword_boost.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [
@@ -731,11 +827,10 @@
         "ae6ee93d-9a36-4417-9c4d-46fc76718d28",
         "a1d9d034-163b-4454-97f4-aff0cacbaf49",
         "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b",
-        "92962e0c-1b77-4e0c-89fe-a07dd753f8c3",
+        "b0e821d2-9640-421a-aa4f-bc6bd8140079",
         "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
-        "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
-        "81e4d561-565d-483f-8e1e-2d3126f1b0d0",
-        "2130efbc-6cf3-436e-9efb-976a2973a705"
+        "37e0fbd4-a2df-4e73-a945-4d01f242789c",
+        "32732bab-6bca-472c-8bce-c7e6ac1f9ec2"
     ],
     "tutorial": ""
 }

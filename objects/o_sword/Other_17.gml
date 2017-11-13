@@ -16,5 +16,3 @@ if( drewTime > drewTimeTurn ){
 }
 
 drewTime += 1;
-
-swordFlyConsume();

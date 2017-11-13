@@ -5,6 +5,10 @@ if(mouseRight && alarm[0] <= 0){
 	lastBackStatus = 0;			//未到达出鞘落点
 	alarm[0] = backCooldown;	//剑归冷却
 }else if(mouseLeft || status != swordStates.back){
-	moveForward();
 	status = swordStates.flying;
+	if(mouseLeft){
+		swordBoost();
+	}else{
+		moveForward();
+	}
 }
