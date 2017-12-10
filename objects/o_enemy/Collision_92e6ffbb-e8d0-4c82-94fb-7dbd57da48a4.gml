@@ -13,7 +13,7 @@ if( HP > 0 ){
 		//HP数值显示
 		var directionSword = other.direction;
 		var speedSword = other.speed;
-		var inst = instance_create_layer(other.x+32,other.y,"instances",o_HPloose_enemy);
+		var inst = instance_create_layer(other.x+32,other.y,"instances",o_HPloose);
 		with(inst){
 			HPloose = eHPloose;
 			direction = directionSword + random_range(-3,3);
@@ -27,7 +27,6 @@ if( HP > 0 ){
 			o_player_status.MP += maxMP;
 			o_dynamic_info.nextInfo = "+" + string(maxMP);
 			o_dynamic_info.nextInfoX = o_enegybar.x + o_enegybar.xscale;
-			o_room.totalMonster--;
 		}
 		
 		if(other.status != 8 && other.status != 9){	//非入鞘or剑归状态

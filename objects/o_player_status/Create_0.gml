@@ -22,19 +22,19 @@ lvlMP = [
 240, 241, 242, 243, 244, 245, 246, 247, 248, 249,
 250];
 
-lvl = 0;
+lvl = 10;
 
 maxMP = lvlMP[lvl];
 MP = 0;
 MPrecov = 1;
-
+DEF = 1;
 
 layerId = layer_get_id("status");
 layerDepth = layer_get_depth(layerId);
 
-enegycaseInst = inst_4A5A6A60;
-sidesLeft = inst_4E0F5338;
-sidesRight = inst_4435A871;
+enegycaseInst = instance_find(o_enegy_case, 0);
+sidesLeft = instance_find(o_enegy_sides, 0);
+sidesRight = instance_find(o_enegy_sides, 1);
 //每次升级MP框增加的宽度
 var c = getCamera();
 addLength = floor((c[2] - enegycaseInst.xscale) / array_length_1d(lvlMP));
@@ -52,3 +52,7 @@ enegybarMPTrans.type = enegyBarType.TRANS;
 
 
 alarm[0] = room_speed;
+
+depth = layerDepth - 50;
+
+playerDead = false;

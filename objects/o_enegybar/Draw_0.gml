@@ -15,5 +15,5 @@ if(type == enegyBarType.MAIN){
 
 var cXY = getCamera();
 draw_set_colour(color);
-draw_rectangle(x + cXY[XI], y + cXY[YI]-3,x + cXY[XI] + xscaleTransition, y + cXY[YI] - 16, false);
+draw_rectangle(x + cXY[XI], y + cXY[YI] - 4 ,x + cXY[XI] + xscaleTransition, y + cXY[YI] - 15, false);
 draw_set_colour(noone);

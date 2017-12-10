@@ -3,7 +3,10 @@ maxMP = 2;
 MP = maxMP;
 maxHP = maxMP*(maxMP+1)/2;
 HP = maxHP;
+ATT = 20;
 DEF = 2;
+ATTover = true;
+
 
 punctureCooldown = 30;
 image_alpha = 0;
@@ -21,3 +24,5 @@ rotationRate = 10;
 
 //sprite面向相反
 image_xscale = -1;
+
+depth = o_player.depth + random_range(-1,1);

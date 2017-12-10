@@ -1,4 +1,4 @@
-/// @description
+if(o_player_status.playerDead) exit;
 
 //飞行起始
 if(status == playerStates.flyStart) exit;

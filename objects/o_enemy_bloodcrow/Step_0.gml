@@ -30,3 +30,8 @@ if(image_angle > 90 && image_angle < 270){
 }else{
 	image_yscale = 1;
 }
+
+//攻击冷却
+if(!place_meeting(x, y, o_player)){
+	ATTover = true;
+}
