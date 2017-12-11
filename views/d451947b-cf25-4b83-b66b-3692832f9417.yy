@@ -8,7 +8,7 @@
         "8c84f06c-6275-4637-925e-5341a84197ec"
     ],
     "filterType": "GMSprite",
-    "folderName": "skill",
+    "folderName": "sword",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

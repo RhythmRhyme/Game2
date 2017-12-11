@@ -1,7 +1,7 @@
 
 var cXY = getCamera();
 draw_set_font(global.playerLevelFont);
-draw_text(x + cXY[XI] - 12, y + cXY[YI] + 14, string(maxMP));
+draw_text(x + cXY[XI] + 6, y + cXY[YI] + 14, string(lvl));
 draw_set_font(noone);
 
 /*

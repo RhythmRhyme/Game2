@@ -27,7 +27,5 @@ speedMax = 16;
 slowdown = 0;	//slowdown = 0.25;
 rotationRate = 12;	//5-15
 
-speedFullDMG = speedMax;	//此速度造成最大伤害
-
 damage = 10;
 

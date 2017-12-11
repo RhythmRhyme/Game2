@@ -22,7 +22,7 @@ lvlMP = [
 240, 241, 242, 243, 244, 245, 246, 247, 248, 249,
 250];
 
-lvl = 10;
+lvl = 1;
 
 maxMP = lvlMP[lvl];
 MP = 0;
@@ -56,3 +56,5 @@ alarm[0] = room_speed;
 depth = layerDepth - 50;
 
 playerDead = false;
+
+x = enegycaseInst.x;

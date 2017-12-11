@@ -1,8 +1,8 @@
 
-maxMP = 2;
+maxMP = 20000;
 MP = maxMP;
 maxHP = maxMP*(maxMP+1)/2;
-HP = maxHP;
+HP = 1;
 ATT = 20;
 DEF = 2;
 ATTover = true;
