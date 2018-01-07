@@ -1,9 +1,10 @@
+event_inherited();
 
-maxMP = 20000;
+maxMP = 2;
 MP = maxMP;
 maxHP = maxMP*(maxMP+1)/2;
-HP = 1;
-ATT = 20;
+HP = maxHP;
+ATT = 2;
 DEF = 2;
 ATTover = true;
 

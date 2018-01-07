@@ -29,3 +29,4 @@ rotationRate = 12;	//5-15
 
 damage = 10;
 
+box = noone;

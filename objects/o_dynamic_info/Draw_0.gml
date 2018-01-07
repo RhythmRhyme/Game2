@@ -5,12 +5,14 @@ if(nextInfo != ""){
 		if(i == 0){
 			infos[i] = nextInfo;
 			infosX[i] = nextInfoX;
+			infosY[i] = nextInfoY;
 			nextInfo = "";
 			infosAlpha[i] = 1;
 			infosShowtimes[i] = 0;
 		}else{
 			infos[i] = infos[i-1];
 			infosX[i] = infosX[i-1];
+			infosY[i] = infosY[i-1];
 			infosAlpha[i] = infosAlpha[i-1];
 			infosShowtimes[i] = infosShowtimes[i-1];
 		}
@@ -26,6 +28,6 @@ for(var i=0; i<array_length_1d(infos); i++){
 		infosAlpha[i] -= 0.01;
 	}
 	draw_set_alpha(infosAlpha[i]);
-	draw_text(vcX + infosX[i], vcY + Y, infos[i]);
+	draw_text(vcX + infosX[i], vcY + infosY[i], infos[i]);
 	draw_set_alpha(1);
 }

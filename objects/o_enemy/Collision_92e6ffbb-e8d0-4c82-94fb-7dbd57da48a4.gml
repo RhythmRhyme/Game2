@@ -27,6 +27,7 @@ if( HP > 0 ){
 			o_player_status.MP += maxMP;
 			o_dynamic_info.nextInfo = "+" + string(maxMP);
 			o_dynamic_info.nextInfoX = o_enegybar.x + o_enegybar.xscale;
+			o_dynamic_info.nextInfoY = o_enegybar.y + o_enegybar.sprite_height;
 		}
 		
 		if(other.status != 8 && other.status != 9){	//非入鞘or剑归状态

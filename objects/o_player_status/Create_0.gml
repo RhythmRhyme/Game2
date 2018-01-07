@@ -32,18 +32,22 @@ DEF = 1;
 layerId = layer_get_id("status");
 layerDepth = layer_get_depth(layerId);
 
-enegycaseInst = instance_find(o_enegy_case, 0);
-sidesLeft = instance_find(o_enegy_sides, 0);
-sidesRight = instance_find(o_enegy_sides, 1);
+enegycaseInst = instance_create_layer(785, 1012, "status", o_enegy_case);
+enegycaseInst.xscale = 350;	//MP框长度
+sidesLeft = instance_create_layer(enegycaseInst.x - sprite_get_width(s_case_sides) , enegycaseInst.y, "status", o_enegy_sides);
+sidesRight = instance_create_layer(enegycaseInst.x + enegycaseInst.xscale , enegycaseInst.y, "status", o_enegy_sides);
+
 //每次升级MP框增加的宽度
 var c = getCamera();
 addLength = floor((c[2] - enegycaseInst.xscale) / array_length_1d(lvlMP));
 
+//MP
 enegybarMP = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
 enegybarMP.color = make_colour_rgb(25, 200-floor(maxMP/5), 255);
 enegybarMP.depth = layerDepth - 10;
 enegybarMP.type = enegyBarType.MAIN;
 
+//MP底层过度条
 enegybarMPTrans = instance_create_layer(enegycaseInst.x,enegycaseInst.y,layerId,o_enegybar);
 enegybarMPTrans.color = c_gray;
 enegybarMPTrans.depth = enegybarMP.depth + 1;
@@ -57,4 +61,5 @@ depth = layerDepth - 50;
 
 playerDead = false;
 
-x = enegycaseInst.x;
+x = enegycaseInst.x + 2;
+y = enegycaseInst.y + 2;

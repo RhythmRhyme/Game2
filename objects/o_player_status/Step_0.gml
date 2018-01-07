@@ -16,7 +16,7 @@ if(MP >= lvlMP[lvl]){
 		sidesRight.x = enegycaseInst.x + enegycaseInst.xscale + abs(sidesRight.sprite_width);
 		enegybarMP.x = enegycaseInst.x;
 		enegybarMPTrans.x = enegybarMP.x;
-		x = enegycaseInst.x;
+		x = enegycaseInst.x + 2;
 	}else{
 		//超过最大等级
 		MP = clamp(MP, -99999, maxMP);
@@ -36,7 +36,7 @@ if(MP >= lvlMP[lvl]){
 		sidesRight.x = enegycaseInst.x + enegycaseInst.xscale + abs(sidesRight.sprite_width);
 		enegybarMP.x = enegycaseInst.x;
 		enegybarMPTrans.x = enegybarMP.x;
-		x = enegycaseInst.x;
+		x = enegycaseInst.x + 2;
 	}
 }
 
@@ -50,11 +50,13 @@ enegybarMPTrans.xscale = enegybarMP.xscale;
 
 //MP恢复量
 MPrecov = 0;
-if(o_sword.speed > 1 && !instance_exists(o_sword_boost)){
-	MPrecov += maxMP / 120;
-}
-if(o_player.status == playerStates.sit){
-	MPrecov += maxMP / 120;
-}else if(o_player.status != playerStates.fly){
-	MPrecov += maxMP / 240;
+if(instance_exists(o_sword)){
+	if(o_sword.speed > 1 && !instance_exists(o_sword_boost)){
+		MPrecov += maxMP / 120;
+	}
+	if(o_player.status == playerStates.sit){
+		MPrecov += maxMP / 120;
+	}else if(o_player.status != playerStates.fly){
+		MPrecov += maxMP / 240;
+	}
 }
