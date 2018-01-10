@@ -13,13 +13,13 @@ if(dead){
 		image_alpha = image_alpha + 4/room_speed;
 	}
 }
-direction = o_sword.direction;
+direction = sword.direction;
 image_angle = direction;
-x = o_sword.x;
-y = o_sword.y;
-speed = o_sword.speed;
+x = sword.x;
+y = sword.y;
+speed = sword.speed;
 
-if(o_sword.speed >= o_sword.speedMax){
+if(sword.speed >= sword.speedMax){
 	sprite_index = s_sword_boost_fire;
 }else{
 	sprite_index = s_sword_boost;

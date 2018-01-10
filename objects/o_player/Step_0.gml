@@ -22,5 +22,3 @@ if(speedh > 0){
 	xscale = -1;
 	image_xscale = xscale;
 }
-
-swordFollowPlayer();

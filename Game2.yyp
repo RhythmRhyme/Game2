@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "5ce11cd5-3ece-4f76-960c-99b8f936503d",
+            "Value": {
+                "id": "69a897e8-4f0e-4005-a90a-cb2747e564a9",
+                "resourcePath": "objects\\o_player_fly_sowrd\\o_player_fly_sowrd.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5e3d1bfa-9f19-44e8-9173-7647169f9cdc",
             "Value": {
                 "id": "ef5de77f-1d26-4a8e-8f00-4b4570de6e81",
@@ -471,14 +479,6 @@
             }
         },
         {
-            "Key": "7abf407e-0622-4250-8a97-c5678b6865ea",
-            "Value": {
-                "id": "f75820a3-2bff-4d27-8d7f-184fcf0533f6",
-                "resourcePath": "views\\7abf407e-0622-4250-8a97-c5678b6865ea.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "7aef6286-9591-4914-98ee-30b0fc3e074b",
             "Value": {
                 "id": "850713f7-0a93-4d3d-b188-da395ff0f9a5",
@@ -500,6 +500,14 @@
                 "id": "7b9bcc14-d859-4727-bc50-3a6860c5ad73",
                 "resourcePath": "views\\7d282fb4-0457-451d-9043-c9ba163e8e8b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "80f0aacd-d586-4d8c-8fcb-0bd4140ad9e6",
+            "Value": {
+                "id": "9a04c4c0-5313-4958-b784-b21c98cb94c3",
+                "resourcePath": "sprites\\s_player_fly_sword\\s_player_fly_sword.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -671,6 +679,14 @@
             }
         },
         {
+            "Key": "b13cdedf-e056-42a9-a49e-af63922a2bbf",
+            "Value": {
+                "id": "6ea4549b-6f72-45fd-b2c6-e5c15ce721ef",
+                "resourcePath": "views\\b13cdedf-e056-42a9-a49e-af63922a2bbf.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "b4dbe480-057c-43eb-b881-aab34eb1e4fa",
             "Value": {
                 "id": "92e87b73-395e-451d-a704-e686024fe3cd",
@@ -748,6 +764,14 @@
                 "id": "d6ce2a37-f8f7-459e-b95d-7757a8f36266",
                 "resourcePath": "sprites\\s_enemy_spawn\\s_enemy_spawn.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c27f1711-94af-427b-bc41-441a78ee270c",
+            "Value": {
+                "id": "044a332c-c17e-41e6-a361-9d8c447d3e1c",
+                "resourcePath": "views\\c27f1711-94af-427b-bc41-441a78ee270c.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -895,6 +919,14 @@
             }
         },
         {
+            "Key": "faa46746-1eaa-4b8d-b123-8ebdd925ce59",
+            "Value": {
+                "id": "2a566439-a650-4982-9147-016cc77b0168",
+                "resourcePath": "sprites\\s_player_fly_sword_dynamic\\s_player_fly_sword_dynamic.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fad819d0-88d4-4a7b-96f2-6300bb3301fd",
             "Value": {
                 "id": "16841394-9449-4e5b-8855-6acb25e38955",
@@ -938,11 +970,11 @@
         "644ad148-001e-4bc0-971c-ebbcd4bf2fa0",
         "ae6ee93d-9a36-4417-9c4d-46fc76718d28",
         "a1d9d034-163b-4454-97f4-aff0cacbaf49",
-        "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b",
         "b0e821d2-9640-421a-aa4f-bc6bd8140079",
         "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
         "37e0fbd4-a2df-4e73-a945-4d01f242789c",
-        "32732bab-6bca-472c-8bce-c7e6ac1f9ec2"
+        "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
+        "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b"
     ],
     "tutorial": ""
 }

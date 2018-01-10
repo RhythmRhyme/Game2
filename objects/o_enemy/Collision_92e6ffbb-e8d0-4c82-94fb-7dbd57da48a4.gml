@@ -1,6 +1,10 @@
 
 if( HP > 0 ){
-	if(other.speed > 4 && alarm[0] <= 0 && other.status != 7 && (other.status != 8 || !other.lastBackStatus) ){
+	//允许碰撞的剑的状态
+	var sowrdStatus = other.status != 7 && (other.status != 8 || !other.lastBackStatus) && other.status != 9 ;
+	var attacked = ds_list_find_index(other.attackedList, id) > -1;
+	
+	if(other.speed > 4 && alarm[0] <= 0 && sowrdStatus && !attacked ){
 		var eHPloose = other.damage - DEF;
 		var dmgPercent = other.speed / other.speedMax;	//速度影响伤害
 		eHPloose = round(eHPloose * dmgPercent);
@@ -18,7 +22,7 @@ if( HP > 0 ){
 			HPloose = eHPloose;
 			direction = directionSword + random_range(-3,3);
 			speed = speedSword * 0.25;
-			scale = dmgPercent/2;
+			scale = clamp(dmgPercent/2, 0.75, 1.5);
 		}
 		
 		HP -= eHPloose;
@@ -36,5 +40,7 @@ if( HP > 0 ){
 		//受击冷却
 		alarm[0] = punctureCooldown;
 		
+		//增加到已攻击列表中
+		ds_list_add(other.attackedList , id);
 	}
 }

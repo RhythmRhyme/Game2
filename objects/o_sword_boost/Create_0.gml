@@ -5,3 +5,5 @@ image_alpha = 0;
 dead = false;
 
 boostFire = noone;
+
+sword = noone;
