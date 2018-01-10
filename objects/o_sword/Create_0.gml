@@ -27,7 +27,20 @@ speedMax = 16;
 slowdown = 0;	//slowdown = 0.25;
 rotationRate = 12;	//5-15
 
+//等级对应经验	TODO
+levelEXP = [
+	10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,999999,999999
+];
+
+//攻击
 damage = 10;
+//MP恢复量
+MPRecov = 1;
+//等级
+level = 1;
+//经验
+EXP = 0;
+maxEXP = levelEXP[level];
 
 box = noone;
 

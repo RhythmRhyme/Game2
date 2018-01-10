@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1f1cb98e-895a-4c62-8684-f648db71a9a3",
+            "Value": {
+                "id": "dbc7bf9f-c6da-4df1-b1bc-67819c8785e6",
+                "resourcePath": "scripts\\MPRecover\\MPRecover.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "22ff6e4f-0b44-482d-a591-4d35c14ca699",
             "Value": {
                 "id": "390ff905-6338-48d2-9630-448df263880e",
@@ -543,6 +551,14 @@
             }
         },
         {
+            "Key": "91a680ec-10de-4631-90db-d5ef07a0fd54",
+            "Value": {
+                "id": "8dc8136a-fd17-4d8e-9a62-b3ceb646deef",
+                "resourcePath": "scripts\\createSword\\createSword.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "942d99dd-c4db-4364-8128-d4da58109b5c",
             "Value": {
                 "id": "b038f5a9-caab-4c64-9615-c1e2833bd1e7",
@@ -971,10 +987,12 @@
         "ae6ee93d-9a36-4417-9c4d-46fc76718d28",
         "a1d9d034-163b-4454-97f4-aff0cacbaf49",
         "b0e821d2-9640-421a-aa4f-bc6bd8140079",
+        "91a680ec-10de-4631-90db-d5ef07a0fd54",
         "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
         "37e0fbd4-a2df-4e73-a945-4d01f242789c",
         "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
-        "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b"
+        "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b",
+        "1f1cb98e-895a-4c62-8684-f648db71a9a3"
     ],
     "tutorial": ""
 }

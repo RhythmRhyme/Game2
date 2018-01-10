@@ -16,8 +16,8 @@ if(ATTover && !o_player_status.playerDead){
 		HPloose = dmg;
 		direction = directionSword + random_range(-3,3);
 		speed = speedSword * 0.25;
+		//玩家受击效果
+		instance_create_layer(x, y, "instances", o_player_looseHP);
 	}
 	
-	//玩家受击效果
-	var effInst = instance_create_layer(inst.x, inst.y, "instances", o_player_looseHP);
 }

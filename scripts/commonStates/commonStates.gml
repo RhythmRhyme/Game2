@@ -7,3 +7,7 @@ if(speed > distance){
 //剑尖指向鼠标位置
 var directionMouse = point_direction(x,y,mouse_x,mouse_y);
 directionTo(directionMouse);
+
+//剑大小
+image_xscale = lerp(image_xscale, 1, 0.1);
+image_yscale = lerp(image_yscale, 1, 0.1);

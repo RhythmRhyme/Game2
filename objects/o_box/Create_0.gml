@@ -1,35 +1,32 @@
 alpha_ = 1;
+index = 0;
 key = ord("1");
 
-sword = instance_create_layer(x, y, "Instances", o_sword);
-sword.box = id;
+sword = noone;
 
-var ran = random_range(0,5);
-if(round(ran) == 5){
-	sword.sprite_index = s_sword_cucumber;
-	sword.speedMax = 13;
-	sword.damage = 2;
-	
-}else if(round(ran) == 4){
-	sword.sprite_index = s_sword_4;
-	sword.speedMax = 12;
-	sword.damage = 20;
-		
-}else if(round(ran) == 3){
-	sword.sprite_index = s_sword_3;
-	sword.speedMax = 14;
-	sword.damage = 14;
-		
-}else if(round(ran) == 2){
-	sword.sprite_index = s_sword_2;
-	sword.speedMax = 20;
-	sword.damage = 5;
-			
-}else{
-	sword.sprite_index = s_sword;
-	sword.speedMax = 16;
-	sword.damage = 10;
-			
-}
 x_ = x;
 y_ = y;
+
+
+//layer
+layerId = layer_get_id("status");
+layerDepth = layer_get_depth(layerId);
+
+//MP 此时box的x、y的位置还不确定
+enegybar = instance_create_layer(x , y ,"status",o_enegybar);
+enegybar.color = make_colour_rgb(25, 275 - o_player_status.maxMP, 255);
+enegybar.depth = layerDepth - 10;
+enegybar.type = enegyBarType.MAIN;
+enegybar.width = 4;
+enegybar.height = 8;
+
+
+//MP底层过度条
+enegybarTrans = instance_create_layer(x , y ,"status",o_enegybar);
+enegybarTrans.color = c_gray;
+enegybarTrans.depth = enegybar.depth + 1;
+enegybarTrans.image_alpha = 0.5;
+enegybarTrans.type = enegyBarType.TRANS;
+enegybarTrans.width = 4;
+enegybarTrans.height = 8;
+
