@@ -1,5 +1,5 @@
 
-//MP恢复量
+//MP恢复量计算
 MPrecov = 0;
 if(instance_exists(o_box)){
 	with(o_box){
@@ -11,5 +11,7 @@ if(instance_exists(o_box)){
 	}
 	if(o_player.status == playerStates.sit){
 		MPrecov *= 2;
+	}else if(o_player.status == playerStates.fly){
+		MPrecov /= 2;
 	}
 }

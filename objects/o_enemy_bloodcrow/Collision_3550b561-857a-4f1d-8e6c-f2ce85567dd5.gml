@@ -2,10 +2,11 @@
 if(ATTover && !o_player_status.playerDead){
 	ATTover = false;
 	//减速
-	speed /= 2;
+	speed /= 4;
 	
 	var dmg = clamp(round(ATT - o_player_status.DEF), 1, 99999);
 	o_player_status.MP -= dmg;
+	if(o_player_status.MP<0) o_player_status.MP=0;
 	
 	//HP数值显示
 	var directionSword = direction;

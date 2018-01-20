@@ -1,20 +1,18 @@
 event_inherited();
 
-maxMP = 2;
+maxMP = 6;
 MP = maxMP;
 maxHP = maxMP*(maxMP+1)/2;
 HP = maxHP;
-ATT = 2;
+ATT = maxMP;
 DEF = 2;
 ATTover = true;
 
-
-punctureCooldown = 30;
 image_alpha = 0;
 
 sprite_dead = s_enemy_bloodcrow_dead;
 
-maxSpeed = 5;
+maxSpeed = 4;
 
 target = o_player;
 

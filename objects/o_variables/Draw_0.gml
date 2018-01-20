@@ -13,6 +13,8 @@ if(debug_mode){
 	draw_text(vpX,vpY+60,"o_player_status.MPrecov = "+string(o_player_status.MPrecov));
 	draw_text(vpX,vpY+80,"o_player_status.MP = "+string(o_player_status.MP));
 	draw_text(vpX,vpY+100,"o_player_status.maxMP = "+string(o_player_status.maxMP));
+	draw_text(vpX,vpY+120,"o_player_status.EXP = "+string(o_player_status.EXP));
+	draw_text(vpX,vpY+140,"o_player_status.maxEXP = "+string(o_player_status.maxEXP));
 
 	draw_text(vpX+300,vpY,"o_player.(x,y) = "+"("+string(o_player.x)+", "+string(o_player.y)+")");
 	draw_text(vpX+300,vpY+20,"o_player.speedv = "+string(o_player.speedv));

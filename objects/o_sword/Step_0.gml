@@ -4,12 +4,6 @@ if(o_player_status.playerDead){
 	exit;
 }
 
-//剑经验、等级
-if(EXP > maxEXP){
-	EXP = EXP - maxEXP;
-	maxEXP = levelEXP[level];
-	level++;
-}
-
+swordLevelUp();
 
 event_user(status);

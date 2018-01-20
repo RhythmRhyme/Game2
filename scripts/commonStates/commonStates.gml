@@ -1,7 +1,7 @@
 //到达鼠标指向位置时停止移动
 var distance = distance_to_point(mouse_x,mouse_y);
-if(speed > distance){
-	speed = distance;
+if(speed*5 > distance){
+	speed = distance/4;
 }
 	
 //剑尖指向鼠标位置

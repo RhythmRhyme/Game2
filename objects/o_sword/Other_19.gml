@@ -40,3 +40,12 @@ if(abs(playerX - x) < speed && abs(playerY - y) < speed && lastBackStatus ){
 	moveForward();
 	
 }
+
+//移除加速效果
+if(instance_exists(boostInst)){
+	boostInst.dead = true;
+}
+
+//剑缩小
+image_xscale = lerp(image_xscale, 0.5, 0.05);
+image_yscale = lerp(image_yscale, 0.5, 0.05);

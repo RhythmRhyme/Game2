@@ -1,46 +1,73 @@
 if(!instance_exists(sword)){
 	sword = instance_create_layer(x, y, "Instances", o_sword);
-	sword.box = id;
+	with(sword){
+		box = other.id;
 
-	if(index == 5){
-		sword.sprite_index = s_sword_cucumber;
-		sword.speedMax = 13;
-		sword.damage = 2;
-		sword.MPRecov = 5;
-		sword.level = 1;
-		sword.maxEXP = sword.levelEXP[sword.level];
+		if(other.index == 5){
+			sprite_index = s_sword_cucumber;
+			speedMax = 13;
+			attackBase = 2;
+			MPRecovBase = 5;
+			attackGP = 0.1;
+			MPRecovGP = 0.3;
+			level = 1;
+			name = "黄瓜";
+			maxEXP = level*attack;
+			attack = round(attackBase + attackGP * level);
+			MPRecov = round(MPRecovBase + MPRecovGP * level);
 	
-	}else if(index == 4){
-		sword.sprite_index = s_sword_4;
-		sword.speedMax = 12;
-		sword.damage = 20;
-		sword.MPRecov = 3;
-		sword.level = 6;
-		sword.maxEXP = sword.levelEXP[sword.level];
+		}else if(other.index == 4){
+			sprite_index = s_sword_4;
+			speedMax = 12;
+			attackBase = 20;
+			MPRecov = 2;
+			attackGP = 0.8;
+			MPRecovGP = 0.2;
+			level = 6;
+			name = "大吴剑";
+			maxEXP = level*attack;
+			attack = round(attackBase + attackGP * level);
+			MPRecov = round(MPRecovBase + MPRecovGP * level);
 		
-	}else if(index == 3){
-		sword.sprite_index = s_sword_3;
-		sword.speedMax = 14;
-		sword.damage = 14;
-		sword.MPRecov = 1;
-		sword.level = 13;
-		sword.maxEXP = sword.levelEXP[sword.level];
+		}else if(other.index == 3){
+			sprite_index = s_sword_3;
+			speedMax = 14;
+			attackBase = 14;
+			MPRecov = 1;
+			attackGP = 0.7;
+			MPRecovGP = 0.1;
+			level = 13;
+			name = "霄炼剑";
+			maxEXP = level*attack;
+			attack = round(attackBase + attackGP * level);
+			MPRecov = round(MPRecovBase + MPRecovGP * level);
 		
-	}else if(index == 2){
-		sword.sprite_index = s_sword_2;
-		sword.speedMax = 20;
-		sword.damage = 5;
-		sword.MPRecov = 1;
-		sword.level = 7;
-		sword.maxEXP = sword.levelEXP[sword.level];
+		}else if(other.index == 2){
+			sprite_index = s_sword_2;
+			speedMax = 20;
+			attackBase = 5;
+			MPRecov = 1;
+			attackGP = 0.5;
+			MPRecovGP = 0.2;
+			level = 7;
+			name = "湛卢剑";
+			maxEXP = level*attack;
+			attack = round(attackBase + attackGP * level);
+			MPRecov = round(MPRecovBase + MPRecovGP * level);
 			
-	}else{
-		sword.sprite_index = s_sword;
-		sword.speedMax = 16;
-		sword.damage = 10;
-		sword.MPRecov = 5;
-		sword.level = 20;
-		sword.maxEXP = sword.levelEXP[sword.level];
+		}else{
+			sprite_index = s_sword;
+			speedMax = 16;
+			attackBase = 10;
+			MPRecov = 5;
+			attackGP = 0.5;
+			MPRecovGP = 0.5;
+			level = 20;
+			name = "符载剑";
+			maxEXP = level*attack;
+			attack = round(attackBase + attackGP * level);
+			MPRecov = round(MPRecovBase + MPRecovGP * level);
 			
+		}
 	}
 }
