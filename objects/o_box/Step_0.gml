@@ -29,6 +29,7 @@ if(key_down){
 			status = swordStates.drew;
 			depth = layer_get_depth(layerId) - 20;
 		}
+		
 		//box透明度
 		alpha_ = 0.75;
 	

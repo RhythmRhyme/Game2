@@ -3,7 +3,7 @@ index = 0;
 //快捷键
 key = noone;
 
-//出剑
+//触发
 trigger = false;
 
 sword = noone;
@@ -13,6 +13,7 @@ x_ = x;
 y_ = y;
 
 
+//DELETE
 ////layer
 //layerId = layer_get_id("status");
 //layerDepth = layer_get_depth(layerId);
@@ -34,7 +35,6 @@ y_ = y;
 //enegybarTrans.width = 4;
 //enegybarTrans.height = 8;
 
-//DELETE
 //攻击次数  此时box的x、y的位置还不确定
 //enegybarAC = instance_create_layer(x , y ,"status",o_enegybar);
 //enegybarAC.color = make_colour_rgb(25, 275 - o_player_status.maxMP, 255);

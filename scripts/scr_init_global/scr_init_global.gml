@@ -3,7 +3,7 @@ global.HPEnemyFont = font_add_sprite_ext(s_HPloose_enemy, "0123456789", true, -2
 
 global.HPPlayerFont = font_add_sprite_ext(s_HPloose_player, "0123456789", true, -2);
 
-global.UIFont = font_add_sprite_ext(s_ui_font, "0123456789MPEX+.%/", true, 0);
+global.UIFont = font_add_sprite_ext(s_ui_font, "0123456789MPEXQ+.%/", true, 0);
 
 global.chineseFont12 = font_add("simhei.ttf",12,true,false,0,65535);
 global.chineseFont10 = font_add("simhei.ttf",10,false,false,0,65535);

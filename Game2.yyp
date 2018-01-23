@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "4955febe-a26e-4df2-83ff-856f362aef4e",
+            "Value": {
+                "id": "88d0f9e7-89a9-4689-955c-9bd26d3c839f",
+                "resourcePath": "scripts\\changeJianZhen\\changeJianZhen.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "49b6da8a-366d-477a-9a8d-c650e8601b36",
             "Value": {
                 "id": "e4bc0560-e538-4de4-b52a-0597d13b42b8",
@@ -332,6 +340,14 @@
                 "id": "ac11689a-4b85-4fd6-87eb-2779f53de953",
                 "resourcePath": "views\\5610e101-a3ee-401c-be68-68c7d512d51f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "57f9b66a-8fe7-45ac-9ace-136bf68a4fbc",
+            "Value": {
+                "id": "68d25075-9c7e-4119-889a-86e73c6e245c",
+                "resourcePath": "sprites\\s_sword_guide\\s_sword_guide.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -671,6 +687,14 @@
             }
         },
         {
+            "Key": "a731e928-42be-4050-96e3-d194513dce32",
+            "Value": {
+                "id": "f8d0dd33-a31d-4790-9c7b-5d05f005ab8c",
+                "resourcePath": "sprites\\s_JianZhen_map\\s_JianZhen_map.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a90e3194-2247-433f-92a0-07498aa6b72f",
             "Value": {
                 "id": "cb04514f-64d7-47a1-9c84-d46e052c817e",
@@ -723,6 +747,14 @@
             "Value": {
                 "id": "92e87b73-395e-451d-a704-e686024fe3cd",
                 "resourcePath": "objects\\o_sword\\o_sword.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b57d9607-3c3e-4cc7-a7c9-cf4d03554e05",
+            "Value": {
+                "id": "6ec27296-046f-4821-b308-a90a49835d49",
+                "resourcePath": "objects\\o_sword_guide\\o_sword_guide.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1028,6 +1060,7 @@
         "b0e821d2-9640-421a-aa4f-bc6bd8140079",
         "91a680ec-10de-4631-90db-d5ef07a0fd54",
         "04257cf2-ba0c-46c9-9526-87f87b18a9ce",
+        "4955febe-a26e-4df2-83ff-856f362aef4e",
         "9f04d67d-f28d-4e78-85cd-e2ada12bce16",
         "37e0fbd4-a2df-4e73-a945-4d01f242789c",
         "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",

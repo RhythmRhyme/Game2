@@ -5,8 +5,11 @@ depth = layer_get_depth(layerId) - 20;
 
 image_angle = 300;
 
-//skill etc
+//skill
 boostInst = noone;
+
+//guide
+guide = instance_create_layer(x,y,layerId,o_sword_guide);
 
 enum swordStates{
 	static = 0,		//剑止
@@ -58,3 +61,6 @@ box = noone;
 
 //单次接触已攻击目标
 attackedList = ds_list_create();
+
+//剑阵
+JianZhen = global.JianZhen1;
