@@ -31,19 +31,26 @@ if(trigger){
 	if(index == global.JianZhenBoxIndex){
 		//外框高亮
 		image_index = 1;
+		//快捷键
+		draw_set_font(global.UIFont);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		draw_text(x, y - sprite_height / 2, string(index+1));
 	}else{
 		//外框取消高亮
 		image_index = 0;
 		//显示快捷键
 		draw_set_font(global.UIFont);
-		draw_set_valign(fa_top);
-		if(index == global.JianZhenBoxIndex - 1){
+		draw_set_valign(fa_middle);
+		draw_set_color(c_aqua);
+		if(index == global.JianZhenBoxPreviousIndex){
 			draw_set_halign(fa_right);
-			draw_text(x + sprite_width / 2 , y - sprite_height / 2, "Q");
-		}else if(index == global.JianZhenBoxIndex + 1){
+			draw_text(x + sprite_width / 2, y, "Q");
+		}else if(index == global.JianZhenBoxNextIndex){
 			draw_set_halign(fa_left);
-			draw_text(x - sprite_width / 2 , y - sprite_height / 2, "E");
+			draw_text(x - sprite_width / 2, y, "E");
 		}
+		draw_set_color(noone);
 		
 	}
 	

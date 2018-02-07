@@ -32,6 +32,13 @@ if(key_down){
 		
 		//box透明度
 		alpha_ = 0.75;
+		
+		//选定第一个飞出的剑的剑阵
+		if(global.boxArr[global.JianZhenBoxIndex].trigger == false){
+			global.JianZhenBoxIndex = index;
+			global.JianZhen = sword.JianZhen;
+			changeJianZhen();
+		}
 	
 	}else if(sword.status != swordStates.inScabbard){
 		//收起武器
@@ -39,6 +46,17 @@ if(key_down){
 		sword.status = swordStates.back;
 		//box透明度
 		alpha_ = 1;
+		
+		//收起全部武器
+		if(index == global.JianZhenBoxIndex){
+			for(var i=0; i<array_length_1d(global.boxArr); i++){
+				if(global.boxArr[i].trigger){
+					global.boxArr[i].trigger = false;
+					global.boxArr[i].sword.status = swordStates.back;
+					global.boxArr[i].alpha_ = 1;
+				}
+			}
+		}
 	}
 }
 

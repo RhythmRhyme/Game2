@@ -20,4 +20,15 @@ if(debug_mode){
 	draw_text(vpX+300,vpY+20,"o_player.speedv = "+string(o_player.speedv));
 	draw_text(vpX+300,vpY+40,"o_player.speedh = "+string(o_player.speedh));
 	draw_text(vpX+300,vpY+60,"o_player.status = "+string(o_player.status));
+	
+	
+	draw_text(vpX+600,vpY+0,"global.boxArr[0].trigger = "+string(global.boxArr[0].trigger) + " index = " + string(global.boxArr[0].index));
+	draw_text(vpX+600,vpY+20,"global.boxArr[1].trigger = "+string(global.boxArr[1].trigger) + " index = " + string(global.boxArr[1].index));
+	draw_text(vpX+600,vpY+40,"global.boxArr[2].trigger = "+string(global.boxArr[2].trigger) + " index = " + string(global.boxArr[2].index));
+	draw_text(vpX+600,vpY+60,"global.boxArr[3].trigger = "+string(global.boxArr[3].trigger) + " index = " + string(global.boxArr[3].index));
+	draw_text(vpX+600,vpY+80,"global.boxArr[4].trigger = "+string(global.boxArr[4].trigger) + " index = " + string(global.boxArr[4].index));
+	
+	
+	
+	
 }

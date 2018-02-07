@@ -17,9 +17,9 @@ for(var i = 0; i <5; i++){
 }
 
 
-global.JianZhen1 = [[0,0],[0,-64],[0,64],[0,-128],[0,128]];	//上下宽
-global.JianZhen2 = [[0,0],[0,-32],[0,32],[0,-64],[0,64]];	//上下
-global.JianZhen3 = [[0,0],[0,-16],[0,16],[0,-32],[0,32]];	//上下集中
+global.JianZhen1 = [[0,0],[0,-32],[0,32],[0,-64],[0,64]];	//上下
+global.JianZhen2 = [[0,0],[0,-16],[0,16],[0,-32],[0,32]];	//上下集中
+global.JianZhen3 = [[0,0],[0,-64],[0,64],[0,-128],[0,128]];	//上下宽
 global.JianZhen4 = [[0,0],[-32,-32],[32,32],[-32,32],[32,-32]];	//五点分布
 //global.JianZhen4 = [[0,10],[8,3],[-8,3],[10,0],[-10,-10]];	//集中
 global.JianZhen5 = [[0,0],[-16,0],[16,0],[-32,0],[32,0]];	//左右集中
@@ -29,3 +29,5 @@ global.JianZhen7 = [[0,0],[-64,0],[64,0],[-128,0],[128,0]];	//左右宽
 
 global.JianZhen = noone;
 global.JianZhenBoxIndex = 0;
+global.JianZhenBoxPreviousIndex = -1;
+global.JianZhenBoxNextIndex = -1;
