@@ -6,6 +6,7 @@ if(!instance_exists(sword)){
 		if(other.index == 4){
 			sprite_index = s_sword_cucumber;
 			speedMax = 13;
+			speedMaxDefault = speedMax;
 			attackBase = 2;
 			MPRecovBase = 5;
 			attackGP = 0.1;
@@ -20,6 +21,7 @@ if(!instance_exists(sword)){
 		}else if(other.index == 3){
 			sprite_index = s_sword_4;
 			speedMax = 13;
+			speedMaxDefault = speedMax;
 			attackBase = 20;
 			MPRecov = 2;
 			attackGP = 0.8;
@@ -34,6 +36,7 @@ if(!instance_exists(sword)){
 		}else if(other.index == 2){
 			sprite_index = s_sword_3;
 			speedMax = 13;
+			speedMaxDefault = speedMax;
 			attackBase = 14;
 			MPRecov = 1;
 			attackGP = 0.7;
@@ -48,6 +51,7 @@ if(!instance_exists(sword)){
 		}else if(other.index == 1){
 			sprite_index = s_sword_2;
 			speedMax = 13;
+			speedMaxDefault = speedMax;
 			attackBase = 5;
 			MPRecov = 1;
 			attackGP = 0.5;
@@ -62,6 +66,7 @@ if(!instance_exists(sword)){
 		}else{
 			sprite_index = s_sword;
 			speedMax = 13;
+			speedMaxDefault = speedMax;
 			attackBase = 10;
 			MPRecov = 5;
 			attackGP = 0.5;

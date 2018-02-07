@@ -36,8 +36,10 @@ levelEXP = [
 ];
 //剑名
 name = noone;
-//速度
+//当前最大速度
 speedMax = 16;
+//默认最大速度
+speedMaxDefault = speedMax;
 //DELETE
 //攻击次数
 //attackTimes = 1;
@@ -64,3 +66,13 @@ attackedList = ds_list_create();
 
 //剑阵
 JianZhen = global.JianZhen1;
+
+
+
+
+//剑击中后的停滞时间
+frozonTime = 0.2 * room_speed;
+frozon = false;
+frozonSpeed = 0;
+
+

@@ -1,7 +1,14 @@
+
+if(frozon){
+	exit;
+}
+	
 //到达鼠标指向位置时停止移动
 var distance = distance_to_point(guide.x,guide.y);
-if(speed*5 > distance){
-	speed = distance/4;
+if(speed*2 > distance){
+	speed = distance/2;
+	//恢复最大速度值
+	speedMax = speedMaxDefault;
 }
 	
 //剑尖指向指引位置

@@ -8,13 +8,13 @@ if( HP > 0 ){
 		other.status = swordStates.puncture;
 		//造成伤害
 		var eHPloose = other.attack - DEF;
-		var dmgPercent = other.speed / other.speedMax;	//速度影响伤害
+		var dmgPercent = other.speed / other.speedMaxDefault;	//速度影响伤害
 		eHPloose = round(eHPloose * dmgPercent);
 
 		if(eHPloose < 1){
 			eHPloose = 1;
 		}
-		other.speed /= 1.33;
+		//other.speed /= 1.33;
 	
 		//HP数值显示
 		var directionSword = other.direction;
@@ -36,5 +36,9 @@ if( HP > 0 ){
 		if(HP <= 0){
 			o_player_status.EXP += MP;
 		}
+		
+		other.frozon = true;
+		other.frozonSpeed = other.speed;
+		other.alarm[1] = other.frozonTime;
 	}
 }
