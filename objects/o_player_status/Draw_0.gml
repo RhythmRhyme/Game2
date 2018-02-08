@@ -15,13 +15,14 @@ draw_set_font(noone);
 draw_set_font(global.chineseFont12);
 draw_set_colour(c_white);
 var pointRight = string(floor(MPrecov*10) - floor(MPrecov)*10);
-var showText = "+"+ string(floor(MPrecov)) + "." + pointRight;
-
+var showText = "";
 if(MPrecov > 0){
-	draw_set_valign(fa_middle);
-	draw_set_halign(fa_right);
-	draw_text(sidesRight.x + cXY[XI] - 1,  sidesRight.y + cXY[YI] - sidesRight.sprite_height/2, showText);
+	showText = "+";
 }
+showText += string(floor(MPrecov)) + "." + pointRight;
+draw_set_valign(fa_middle);
+draw_set_halign(fa_right);
+draw_text(sidesRight.x + cXY[XI] - 1,  sidesRight.y + cXY[YI] - sidesRight.sprite_height/2, showText);
 
 //MP数值
 showText = string(floor(MP)) + "/" + string(floor(maxMP));

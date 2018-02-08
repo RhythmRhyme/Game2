@@ -1,7 +1,4 @@
-if(frozon){
-	speed = 1;
-	exit;
-}
+//DELETE
 
 speed = lerp(speed, speedMax * 2.4, speedAcceleration);
 speed = clamp(speed, 0, speedMax * 2);

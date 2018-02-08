@@ -15,6 +15,8 @@ enum swordStates{
 	static = 0,		//剑止
 	flying = 1,		//剑去
 	puncture = 2,	//剑击
+	frozon = 3,		//剑滞
+	charge = 4,		//蓄力
 	drew = 7,		//剑出
 	inScabbard = 8,	//剑鞘
 	back = 9		//剑归
@@ -52,6 +54,8 @@ attack = 0;
 MPRecovBase = 0;
 MPRecovGP = 0;
 MPRecov = 0;
+//消耗量
+MPCost = 1;
 //等级
 level = 1;
 //经验
@@ -72,7 +76,14 @@ JianZhen = global.JianZhen1;
 
 //剑击中后的停滞时间
 frozonTime = 0.2 * room_speed;
-frozon = false;
+
+//击中/蓄力前的速度
 frozonSpeed = 0;
 
-
+//当前蓄力时间
+chargedTime = 0;
+//每级蓄力时间
+chargedTimePerLevel = room_speed;
+//蓄力等级
+chargedLevel = 0;
+chargedMaxLevel = 3;

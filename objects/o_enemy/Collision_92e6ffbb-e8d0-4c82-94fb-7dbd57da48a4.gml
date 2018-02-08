@@ -5,7 +5,6 @@ if( HP > 0 ){
 	var attacked = ds_list_find_index(other.attackedList, id) > -1;
 	
 	if(other.speed > 4 && sowrdStatus && !attacked ){
-		other.status = swordStates.puncture;
 		//造成伤害
 		var eHPloose = other.attack - DEF;
 		var dmgPercent = other.speed / other.speedMaxDefault;	//速度影响伤害
@@ -14,7 +13,6 @@ if( HP > 0 ){
 		if(eHPloose < 1){
 			eHPloose = 1;
 		}
-		//other.speed /= 1.33;
 	
 		//HP数值显示
 		var directionSword = other.direction;
@@ -37,7 +35,8 @@ if( HP > 0 ){
 			o_player_status.EXP += MP;
 		}
 		
-		other.frozon = true;
+		//剑停滞
+		other.status = swordStates.frozon;
 		other.frozonSpeed = other.speed;
 		other.alarm[1] = other.frozonTime;
 	}

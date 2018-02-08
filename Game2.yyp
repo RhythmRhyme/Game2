@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "155b3d14-fa13-441d-b20d-4638a18fe6ff",
+            "Value": {
+                "id": "34ee2147-bdfd-4493-95c3-e37ac63d5599",
+                "resourcePath": "scripts\\create_animation_effect\\create_animation_effect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "185c51d5-d218-4508-be4d-f82d31a66021",
             "Value": {
                 "id": "cc9e8018-9212-4ff2-827e-3f545b9ff63a",
@@ -556,6 +564,22 @@
                 "id": "0bfbfabb-27be-48f0-a91d-967d6359b8cf",
                 "resourcePath": "objects\\o_lock\\o_lock.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "845e4271-5f58-43c1-8727-e49cd3c72d4f",
+            "Value": {
+                "id": "153c8f37-679c-461b-bb41-d273ee046fbc",
+                "resourcePath": "objects\\o_animation_effect\\o_animation_effect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8b9f9e19-8122-49e8-aa2f-7aa0e0ac7eac",
+            "Value": {
+                "id": "e30caf80-442d-4572-9271-3a83c4c0ba03",
+                "resourcePath": "sprites\\s_sword_boost_charge\\s_sword_boost_charge.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1067,7 +1091,8 @@
         "27cb4ba4-03a4-4d92-bf8d-b60a9085fa8b",
         "1f1cb98e-895a-4c62-8684-f648db71a9a3",
         "bbed15bd-d09c-4b96-b9bc-c9832bcf6d4f",
-        "a90e3194-2247-433f-92a0-07498aa6b72f"
+        "a90e3194-2247-433f-92a0-07498aa6b72f",
+        "155b3d14-fa13-441d-b20d-4638a18fe6ff"
     ],
     "tutorial": ""
 }

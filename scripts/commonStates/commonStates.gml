@@ -1,7 +1,4 @@
 
-if(frozon){
-	exit;
-}
 	
 //到达鼠标指向位置时停止移动
 var distance = distance_to_point(guide.x,guide.y);
