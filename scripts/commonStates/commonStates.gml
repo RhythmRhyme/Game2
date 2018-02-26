@@ -9,9 +9,12 @@ if(speed*2 > distance){
 }
 	
 //剑尖指向指引位置
-var directionMouse = point_direction(x,y,guide.x,guide.y);
-directionTo(directionMouse);
+var directionGuide = point_direction(x,y,guide.x,guide.y);
+directionTo(directionGuide);
 
 //剑大小
-image_xscale = lerp(image_xscale, 1, 0.1);
-image_yscale = lerp(image_yscale, 1, 0.1);
+image_xscale = lerp(image_xscale, 1 + chargedLevel/5, 0.1);
+image_yscale = lerp(image_yscale, 1 + chargedLevel/5, 0.1);
+
+//剑攻击力计算
+attack = round((attackBase + attackGP * level) * (1 + chargedLevel/5));

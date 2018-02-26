@@ -86,4 +86,4 @@ chargedTime = 0;
 chargedTimePerLevel = room_speed;
 //蓄力等级
 chargedLevel = 0;
-chargedMaxLevel = 3;
+chargedMaxLevel = 5;

@@ -39,5 +39,7 @@ if( HP > 0 ){
 		other.status = swordStates.frozon;
 		other.frozonSpeed = other.speed;
 		other.alarm[1] = other.frozonTime;
+		//充能等级
+		other.chargedLevel = clamp(other.chargedLevel-1, 0, other.chargedMaxLevel);
 	}
 }

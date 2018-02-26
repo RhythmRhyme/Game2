@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "3237769a-a1f8-42cc-92db-95bd6b6dce8a",
+            "Value": {
+                "id": "2b3ee30c-90d3-4f16-ad97-5f36acbd8378",
+                "resourcePath": "objects\\o_boss_turtle\\o_boss_turtle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "32732bab-6bca-472c-8bce-c7e6ac1f9ec2",
             "Value": {
                 "id": "1e081395-fcac-49a5-9c0e-531d6a57ee9c",
@@ -423,6 +431,14 @@
             }
         },
         {
+            "Key": "629a5577-a95d-454d-8ea5-fc5c36f60a46",
+            "Value": {
+                "id": "01941526-fae6-40b6-9c74-8226486ed79f",
+                "resourcePath": "objects\\o_boss_bloodcrow\\o_boss_bloodcrow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "644ad148-001e-4bc0-971c-ebbcd4bf2fa0",
             "Value": {
                 "id": "24f252e3-59c4-47fb-a319-ae1b16e7c372",
@@ -483,6 +499,14 @@
             "Value": {
                 "id": "397790f2-68ad-48ee-824a-52b4db26baaa",
                 "resourcePath": "sprites\\s_backgroud\\s_backgroud.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7217ea01-a133-4a7c-a8b2-0bacf8743fe7",
+            "Value": {
+                "id": "3c96db17-1132-4d17-8d50-1d3e0c1473fc",
+                "resourcePath": "sprites\\s_boss_bloodcrow\\s_boss_bloodcrow.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -604,6 +628,14 @@
                 "id": "7c2f73be-3f82-4852-9464-f8536b7a0d90",
                 "resourcePath": "objects\\o_backgournd\\o_backgournd.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8df3f550-a049-4f0b-a333-d013dd37e7b3",
+            "Value": {
+                "id": "191860b7-747a-4e5b-be30-4c43e60dc7bb",
+                "resourcePath": "sprites\\s_boss_turtle\\s_boss_turtle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -764,6 +796,14 @@
                 "id": "6ea4549b-6f72-45fd-b2c6-e5c15ce721ef",
                 "resourcePath": "views\\b13cdedf-e056-42a9-a49e-af63922a2bbf.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b4c8f4eb-3dbc-4237-9118-d6ace756f461",
+            "Value": {
+                "id": "9b78bc10-b589-46d7-8cfd-c1fc875b8743",
+                "resourcePath": "sprites\\s_boss_bloodcrow_dead\\s_boss_bloodcrow_dead.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -935,6 +975,14 @@
             }
         },
         {
+            "Key": "d7b0fa4f-b2c9-407d-928e-2651ee91a9c9",
+            "Value": {
+                "id": "2b2a4644-4e31-443b-9e08-6b8094f80eba",
+                "resourcePath": "sprites\\s_boss_turtle_dead\\s_boss_turtle_dead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dd4dcf8f-d307-400d-9d5c-0709c4477cf1",
             "Value": {
                 "id": "78ede825-1799-4bdc-bc29-6c513627d37f",
@@ -988,6 +1036,14 @@
                 "id": "e97c9246-2e73-4902-b835-254f319ac7ce",
                 "resourcePath": "views\\f0204ef6-398a-4eda-bae0-750f8e313aa4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f1382780-6a2a-4c11-9663-dd73c5264698",
+            "Value": {
+                "id": "dfe5edc2-3c08-4bf8-87c8-7e34b3b24577",
+                "resourcePath": "sprites\\s_boss_turtle_angry\\s_boss_turtle_angry.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -24,3 +24,7 @@ if(sword.speed >= sword.speedMax){
 }else{
 	sprite_index = s_sword_boost;
 }
+
+//随着剑变大
+image_xscale = sword.image_xscale;
+image_yscale = sword.image_yscale;
